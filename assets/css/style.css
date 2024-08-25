@@ -183,6 +183,7 @@ cite {
 .contenido {
   margin-left: 20rem;
   overflow: hidden;
+  margin-right: 2rem;
 }
 
 .contenido__encabezado {
