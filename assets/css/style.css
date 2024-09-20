@@ -13,14 +13,16 @@
 }
 
 :root {
-  --background: #232946;
-  --dark-teal: #0E3B43;
+  --indigo: #232946;
   /*textos*/
+  --dark-teal: #0E3B43;
+  /*enlaces*/
   --dark-blue: #1a5480;
+  --light-blue: #2599DA;
   /*titulos*/
   --white: #fffffe;
   --gray: #5f6c7b;
-  --light-blue: #2599DA;
+
 
 }
 
@@ -58,6 +60,20 @@ section {
   padding: 80px 0;
   overflow: hidden;
 }
+
+a {
+  color: var(--dark-blue)
+}
+
+a:hover {
+  color: var(--light-blue);
+}
+
+a:active {
+  border-style: dotted;
+  color: var(--light-blue);
+}
+
 
 
 /*Buttons*/
@@ -117,61 +133,174 @@ section {
   box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
 }
 
+.nav-link {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
+.nav-link--active {
+  color: var(--light-blue);
+  /* Cambia el color del enlace activo */
+  font-weight: bold;
+  /* Resalta el enlace activo */
+  border-bottom: 2px solid var(--light-blue);
+  /* O alguna otra marca visual */
+}
+
 /*about me section*/
 
-.about-me__image{
+.about-me__image {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-me__image--photo{
+.about-me__image--photo {
   width: 70%;
   height: auto;
 }
 
-.about-me__social{
+.about-me__social {
   padding-top: 1rem;
 }
-.about-me__social i{
+
+.about-me__social i {
   color: var(--white);
 }
-.about-me__social a{
-    font-size: 1.2rem;
-    display: inline-block;
-    background: var(--dark-blue);
-    color: var(--white);
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.5s;
-  }
-  
-  .about-me__social a:hover {
-    background: var(--light-blue);
-    color: var(--white);
-    text-decoration: none;
-  }
 
-.about-me__text{
+.about-me__social a {
+  font-size: 1.2rem;
+  display: inline-block;
+  background: var(--dark-blue);
+  color: var(--white);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.5s;
+}
+
+.about-me__social a:hover {
+  background: var(--light-blue);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.about-me__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.about-me__subtitle{
+/*Formation section*/
+
+.formation__title {
   text-align: center;
   padding-top: 30px;
 }
 
-.about-me__subtitle--phrase{
+.formation__title--phrase {
   font-family: "Atkinson-Hyperlegible-Italic-102";
   font-weight: bold;
   font-size: 1.5rem;
-  color:var(--light-blue);
+  color: var(--light-blue);
+  text-align: center;
 }
 
+.formation__sub-title {
+  color: var(--light-blue);
+}
+
+.formation__item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--light-blue);
+  position: relative;
+}
+
+.formation__item--title {
+  color: var(--indigo);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.formation__item ul {
+  padding-left: 20px;
+}
+
+.formation__item ul li {
+  padding-bottom: 10px;
+}
+
+.formation__item:last-child {
+  padding-bottom: 0;
+}
+
+.formation__item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 5px;
+  background: var(--white);
+  border: 2px solid var(--light-blue);
+}
+
+/*Skills Section*/
+
+.skills__title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.skills__title--phrase {
+  font-family: "Atkinson-Hyperlegible-Italic-102";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.skills__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__logos--images {
+  padding: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+/*plan b*/
+
+.skills__logo{
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 1200px;;
+}
+
+.skills__logo--image{
+  flex-grow: 1;
+  width: 100px;
+  margin: 0 auto;
+  object-fit: cover;
+}
