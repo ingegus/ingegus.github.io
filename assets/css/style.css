@@ -139,12 +139,12 @@ a:active {
 }
 
 .nav-link:hover {
-  color: var(--light-blue);
+  color: var(--indigo);
   font-weight: 600;
 }
 
 .nav-link--active {
-  color: var(--light-blue);
+  color: var(--indigo);
   /* Cambia el color del enlace activo */
   font-weight: bold;
   /* Resalta el enlace activo */
@@ -214,7 +214,9 @@ a:active {
   color: var(--light-blue);
   text-align: center;
 }
-
+.formation__grades{
+  margin: 1rem 20px 0px 20px;
+}
 .formation__sub-title {
   color: var(--light-blue);
 }
@@ -257,6 +259,50 @@ a:active {
   border: 2px solid var(--light-blue);
 }
 
+.formation__cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1rem auto 0px auto;
+  width: 95%;
+  
+}
+
+.formation__cards--card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding: 8px;
+  max-width: 242px;
+}
+.formation__cards--body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.formation__cards--img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+.formation__cards--title {
+  text-align: center;
+}
+.formation__cards--text {
+  hyphens: auto;
+  text-transform: math-auto;
+}
+.formation__cards--footer {
+  color: gray;
+  font-size: smaller;
+  text-transform: capitalize;
+}
+
 /*Skills Section*/
 
 .skills__title {
@@ -272,30 +318,14 @@ a:active {
   text-align: center;
 }
 
-.skills__logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills__logos--images {
-  padding: 30px;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-}
-
-/*plan b*/
-
 .skills__logo{
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
-
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
-  max-width: 1200px;;
+  max-width: 1200px;
 }
 
 .skills__logo--image{
@@ -303,4 +333,5 @@ a:active {
   width: 100px;
   margin: 0 auto;
   object-fit: cover;
+  max-width: 100px;
 }
