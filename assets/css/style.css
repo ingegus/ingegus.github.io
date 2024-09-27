@@ -31,7 +31,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Atkinson-Hyperlegible-Regular-102";
+  font-family: "Atkinson-Hyperlegible-Regular-102", sans-serif;
   color: var(--dark-teal);
 }
 
@@ -47,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Atkinson-Hyperlegible-Italic-102";
+  font-family: "Atkinson-Hyperlegible-Italic-102", Verdana;
   font-weight: bold;
   color: var(--dark-blue);
 }
@@ -76,7 +76,7 @@ a:active {
 
 
 
-/*Buttons*/
+/* Buttons */
 .btn-bd-primary {
   --bs-btn-font-weight: 300;
   --bs-btn-font-size: 1.2rem;
@@ -89,13 +89,18 @@ a:active {
   --bs-btn-focus-shadow-rgb: var(--dark-teal);
   --bs-btn-active-color: var(--bs-btn-hover-color);
   --bs-btn-active-bg: var(--dark-blue);
-  ;
   --bs-btn-active-border-color: var(--dark-blue);
-  ;
-
 }
 
-/*Hero Section*/
+
+.btn-bd-primary:hover {
+  background-color: var(--light-blue);
+  border-color: var(--light-blue);
+  color: var(--white);
+}
+
+
+/* Hero Section */
 .hero {
   min-height: 100vh;
   margin: auto;
@@ -127,7 +132,7 @@ a:active {
   margin-top: 1rem;
 }
 
-/*navegation bar*/
+/* Navegation bar */
 .navbar {
   background: #fff;
   box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
@@ -145,14 +150,11 @@ a:active {
 
 .nav-link--active {
   color: var(--indigo);
-  /* Cambia el color del enlace activo */
   font-weight: bold;
-  /* Resalta el enlace activo */
   border-bottom: 2px solid var(--light-blue);
-  /* O alguna otra marca visual */
 }
 
-/*about me section*/
+/* About me Section */
 
 .about-me__image {
   display: flex;
@@ -200,7 +202,7 @@ a:active {
   justify-content: center;
 }
 
-/*Formation section*/
+/* Formation section */
 
 .formation__title {
   text-align: center;
@@ -214,9 +216,11 @@ a:active {
   color: var(--light-blue);
   text-align: center;
 }
-.formation__grades{
+
+.formation__grades {
   margin: 1rem 20px 0px 20px;
 }
+
 .formation__sub-title {
   color: var(--light-blue);
 }
@@ -265,7 +269,7 @@ a:active {
   flex-wrap: wrap;
   margin: 1rem auto 0px auto;
   width: 95%;
-  
+
 }
 
 .formation__cards--card {
@@ -277,8 +281,9 @@ a:active {
   flex-grow: 1;
   align-items: center;
   padding: 8px;
-  max-width: 242px;
+  max-width: 190px;
 }
+
 .formation__cards--body {
   display: flex;
   flex-direction: column;
@@ -286,24 +291,31 @@ a:active {
 }
 
 .formation__cards--img {
-  width: 100%;
+  width: 100px;
   height: auto;
   max-width: 200px;
 }
+
 .formation__cards--title {
   text-align: center;
+  min-height: 43px;
+  align-content: center;
+  font-size: 1.1rem;
 }
+
 .formation__cards--text {
   hyphens: auto;
   text-transform: math-auto;
+  min-height: 96px;
 }
+
 .formation__cards--footer {
-  color: gray;
+  font-weight: bold;
   font-size: smaller;
   text-transform: capitalize;
 }
 
-/*Skills Section*/
+/* Skills Section */
 
 .skills__title {
   text-align: center;
@@ -318,7 +330,7 @@ a:active {
   text-align: center;
 }
 
-.skills__logo{
+.skills__logo {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
@@ -328,10 +340,77 @@ a:active {
   max-width: 1200px;
 }
 
-.skills__logo--image{
+.skills__logo--image {
   flex-grow: 1;
   width: 100px;
   margin: 0 auto;
   object-fit: cover;
   max-width: 100px;
+}
+
+/* Blog Section */
+
+.blog__title{
+  text-align: center;
+  padding-top: 30px;
+}
+.blog__title--phrase{
+  font-family: "Atkinson-Hyperlegible-Italic-102";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.blog__card {
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.blog__card--body {
+  display: flex;
+  flex-direction: column;
+  align-items: revert-layer;
+  justify-content: end;
+}
+
+.blog__card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%; 
+  margin: 0 1rem 10px 1rem;
+  font-size:16px
+}
+
+.blog__card--img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+/* Carousel buttons */
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  border-radius: 50%;
+  background-size: 0.6rem;
+  background-color: var(--light-blue);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  align-items: self-end;
+  width: 10%;
+  height: 10%;
+  top: 90%;
+}
+
+.carousel-indicators {
+  bottom: -1rem;
+}
+
+.carousel-indicators li {
+  background-color: var(--dark-blue);
 }
