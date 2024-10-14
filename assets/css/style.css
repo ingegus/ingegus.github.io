@@ -22,11 +22,7 @@
   /*titulos*/
   --white: #fffffe;
   --gray: #5f6c7b;
-
-
 }
-
-
 
 * {
   margin: 0;
@@ -74,8 +70,6 @@ a:active {
   color: var(--light-blue);
 }
 
-
-
 /* Buttons */
 .btn-bd-primary {
   --bs-btn-font-weight: 300;
@@ -91,7 +85,6 @@ a:active {
   --bs-btn-active-bg: var(--dark-blue);
   --bs-btn-active-border-color: var(--dark-blue);
 }
-
 
 .btn-bd-primary:hover {
   background-color: var(--light-blue);
@@ -113,7 +106,6 @@ a:active {
   border-color: var(--light-blue);
   color: var(--indigo);
 }
-
 
 /* Hero Section */
 .hero {
@@ -291,7 +283,7 @@ a:active {
   display: flex;
   flex-direction: column;
   border: 1px solid gray;
-  border-radius: 20px;
+  border-radius: 5px;
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
@@ -319,9 +311,8 @@ a:active {
 }
 
 .formation__cards--text {
-  hyphens: auto;
   text-transform: math-auto;
-  min-height: 96px;
+  min-height: 80px;
 }
 
 .formation__cards--footer {
@@ -461,28 +452,35 @@ a:active {
 
 .portfolio__projects{
   min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .portfolio__projects--item {
   padding-top: 1.5rem;
+  text-align: center;
 }
 
 .portfolio__projects--container {
   position: relative;
   display: inline-block;
+  text-align: center;
+  max-width: 80%; 
 }
 .portfolio__projects--image{
   border: 1px solid gray;
-  border-radius: 20px;
-  max-width: 70%;
+  border-radius: 5px;
+  max-width: 100%;
   height: auto;
   padding: 20px;
+  margin: 0 auto; 
 }
 .portfolio__projects--overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 100%;
   height: 100%;
   background: rgba(95, 108, 123, 0.888); /* Fondo semi-transparente */
   color: white;
@@ -491,7 +489,7 @@ a:active {
   justify-content: center;
   opacity: 0; /* Oculto por defecto */
   transition: opacity 0.3s ease;
-  border-radius: 20px;
+  border-radius: 5px;
   pointer-events: none; /* Esto permite que los clics pasen a través del overlay */
 }
 
@@ -505,4 +503,46 @@ a:active {
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+}
+
+/* Services section */
+
+.services__title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.services__title--phrase {
+  font-family: "Atkinson-Hyperlegible-Italic-102";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.services__card{
+  height: 100%; 
+}
+
+.services__card--body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem;
+}
+
+.services__card--icon{
+  width: 1rem;
+}
+
+.services__card--title{
+  text-align: center;
+  align-content: flex-star;
+  min-height: 58px;
+}
+.services__card--text {
+  padding: 0rem 1rem;
+  min-height: 120px;
+  margin: 0;
 }
