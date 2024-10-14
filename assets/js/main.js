@@ -17,7 +17,7 @@ function createCard(item, index) {
                 <div class="blog__card h-100">
                     <img src="${thumbnail}" class="blog__card--img " alt="Imagen del artículo ${index + 1}">
                     <div class="blog__card--body">
-                        <h3 class="blog__card--title">${item.title}</h3>
+                        <h4 class="blog__card--title">${item.title}</h4>
                         <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-bd-primary mt-auto">Leer más</a>
                     </div>
                 </div>
@@ -66,4 +66,22 @@ function loadRssCards() {
 // Cargar y mostrar las tarjetas al cargar la página
 $(document).ready(function () {
     loadRssCards();
+});
+
+/*--- Filtro de la sección portafolio---*/
+$(document).ready(function () {
+
+    $(".filter-b").click(function () {
+        var value = $(this).attr('data-filter');
+        if (value == "todo") {
+            $('.filter').show('1000');
+        }
+        else {
+            $(".filter").not('.' + value).hide('3000');
+            $('.filter').filter('.' + value).show('3000');
+        }
+        // Agrega la clase active al botón seleccionado
+        $(".filter-b").removeClass("active");
+        $(this).addClass("active");
+    });
 });
