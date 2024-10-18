@@ -107,6 +107,38 @@ a:active {
   color: var(--indigo);
 }
 
+.ir-arriba {
+	display:none;
+	padding:20px;
+	background:#024959;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
+/* Skip to content */
+.cloak {
+  position: absolute ! important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.cloak:focus{
+  width: 100%;
+  height: auto;
+  clip: unset;
+  background-color: var(--indigo);
+  color: white;
+  text-align: center;
+}  
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -552,6 +584,9 @@ a:active {
 
 /* Contact section */
 
+.contact{
+  border-bottom: 1px solid black;
+}
 .contact__cards{
   display: flex;
   justify-content: center;
@@ -595,4 +630,31 @@ a:active {
 
 .contact__card--text {
   padding: 0rem 1rem;
+}
+
+/* Footer */
+.footer{
+  padding-top: 1rem;
+}
+.footer--about{
+  padding-bottom: 1rem;
+}
+.footer--img{
+  width: 4rem;
+  height: auto;
+}
+
+.footer--contact ul,
+.footer--menu ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer--copyright{
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
+
+.footer--copyright__polices{
+  text-align: right;
 }

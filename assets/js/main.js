@@ -1,11 +1,8 @@
 /*---- Feed RSS ----*/
-
 const mediumUrl = 'https://ingegus.medium.com'; // URL de Medium
 const numPostsToShow = 6; // Número de posts a mostrar
-
 // Construir la URL del feed de Medium
 const feedUrl = `https://api.rss2json.com/v1/api.json?rss_url=${mediumUrl}/feed`;
-
 // Función para crear las tarjetas
 function createCard(item, index) {
     // Obtener la primera imagen del contenido
@@ -26,7 +23,6 @@ function createCard(item, index) {
 
     return card;
 }
-
 // Función para cargar y mostrar las tarjetas
 function loadRssCards() {
     $.getJSON(feedUrl, function (data) {
@@ -62,7 +58,6 @@ function loadRssCards() {
         }
     });
 }
-
 // Cargar y mostrar las tarjetas al cargar la página
 $(document).ready(function () {
     loadRssCards();
@@ -84,4 +79,24 @@ $(document).ready(function () {
         $(".filter-b").removeClass("active");
         $(this).addClass("active");
     });
+});
+
+/*--- Botón ir hacia arriba ---*/
+
+$(document).ready(function(){
+
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
+
 });
