@@ -85,18 +85,52 @@ $(document).ready(function () {
 
 $(document).ready(function(){
 
-	$('.ir-arriba').click(function(){
+	$('.go-to-top').click(function(){
 		$('body, html').animate({
 			scrollTop: '0px'
 		}, 300);
 	});
 
 	$(window).scroll(function(){
-		if( $(this).scrollTop() > 0 ){
-			$('.ir-arriba').slideDown(300);
+		if( $(this).scrollTop() > 600 ){
+			$('.go-to-top').slideDown(300);
 		} else {
-			$('.ir-arriba').slideUp(300);
+			$('.go-to-top').slideUp(300);
 		}
 	});
 
+});
+
+/*---- Enlaces activos al hacer clic en el menú ----*/
+
+$(document).ready(function () {
+    // Agregar clase 'nav-link--active' al enlace activo y eliminarla de los demás enlaces
+    $('.nav-link').on('click', function () {
+        $('.nav-link').removeClass('nav-link--active');
+        $(this).addClass('nav-link--active');
+    });
+});
+
+$(document).ready(function () {
+    // Función para activar el enlace basado en la posición del desplazamiento
+    function activateNavLink() {
+        var scrollPosition = $(window).scrollTop();
+        $('.nav-link').each(function () {
+            var target = $(this).attr('href');
+            var targetSection = $(target);
+
+            // Verifica si la sección está en la vista
+            if (targetSection.offset().top <= scrollPosition + 60 &&
+                targetSection.offset().top + targetSection.outerHeight() > scrollPosition) {
+                $('.nav-link').removeClass('nav-link--active');
+                $(this).addClass('nav-link--active');
+            }
+        });
+    }
+
+    // Activar el enlace cuando se desplaza
+    $(window).on('scroll', activateNavLink);
+
+    // Activar el enlace al cargar la página si ya se está en una sección
+    activateNavLink();
 });

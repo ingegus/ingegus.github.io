@@ -107,16 +107,23 @@ a:active {
   color: var(--indigo);
 }
 
-.ir-arriba {
+.go-to-top {
 	display:none;
-	padding:20px;
-	background:#024959;
+	padding:10px;
+	background:var(--dark-teal);
 	font-size:20px;
 	color:#fff;
 	cursor:pointer;
 	position: fixed;
-	bottom:20px;
+	bottom:10px;
 	right:20px;
+  border-radius: 50px;
+}
+
+.go-to-top:hover {
+	background:var(--light-blue);
+	color:var(--indigo);
+	
 }
 
 /* Skip to content */
@@ -180,6 +187,7 @@ a:active {
 .nav-link {
   color: var(--dark-blue);
   font-weight: 600;
+  
 }
 
 .nav-link:hover {
@@ -491,7 +499,7 @@ a:active {
 
 .portfolio__projects--item {
   padding-top: 1.5rem;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .portfolio__projects--container {
@@ -635,26 +643,92 @@ a:active {
 /* Footer */
 .footer{
   padding-top: 1rem;
+  background-color: black;
 }
-.footer--about{
+.footer__about{
   padding-bottom: 1rem;
 }
-.footer--img{
+
+.footer__about p,
+.footer__about b{
+  color:var(--white);
+}
+.footer__img{
   width: 4rem;
   height: auto;
 }
 
-.footer--contact ul,
-.footer--menu ul{
+.footer__contact h5,
+.footer__menu h5{
+  color: var(--light-blue);
+}
+
+
+.footer__contact li,
+.footer__contact a,
+.footer__contact i{
+  color:var(--white);
+  margin-right: 8px;
+}
+
+.footer__contact a:hover,
+.footer__contact i:hover{
+  color: var(--light-blue);
+  
+}
+
+.footer__menu a{
+  color:var(--white);
+}
+
+.footer__menu a:hover{
+  color:var(--light-blue);
+}
+
+.footer__contact ul,
+.footer__menu ul{
   list-style-type: none;
   padding-left: 0;
 }
 
-.footer--copyright{
+.footer__copyright{
   border-top: 1px solid black;
   padding-top: 5px;
 }
 
-.footer--copyright__polices{
-  text-align: right;
+.footer__copyright p{
+  color:var(--white);
+}
+
+.footer__copyright--polices a{
+  color:var(--white);
+}
+
+.footer__copyright--polices a:hover{
+  color:var(--light-blue);
+}
+
+.footer__social a {
+  font-size: 1rem;
+  display: inline-block;
+  background: var(--white);
+  color: var(--white);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.5s;
+}
+
+.footer__social a:hover{
+
+  background: var(--light-blue);
+  text-decoration: none;
+}
+
+.footer__social a:hover .bx{
+  color: var(--white);
 }
