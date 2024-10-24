@@ -169,6 +169,10 @@ a:active {
   flex-direction: column;
 }
 
+.hero__image--photo {
+  border-radius: 50%;
+}
+
 .hero__subtitle {
   font-size: 1.5rem;
 }
@@ -699,8 +703,14 @@ a:active {
   padding-top: 5px;
 }
 
-.footer__copyright p {
+.footer__copyright p,
+.footer__copyright a,
+.footer__copyright b {
   color: var(--white);
+}
+
+.footer__copyright a:hover {
+  color: var(--light-blue);
 }
 
 .footer__copyright--polices a {
@@ -736,39 +746,90 @@ a:active {
   color: var(--white);
 }
 
-/* Styles for tablets and small laptops */
-
-@media (max-width: 768px) {
-  .hero{
-    display: none;
-  }
-
+#year,
+#site-title {
+  color: var(--white);
 }
-
 
 /* Styles for smartphones */
 
 @media (max-width: 480px) {
 
-  .hero{
-    display: none;
+  .hero__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
+
+  .hero__image--photo {
+    width: 200px;
+    height: auto;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__button {
+    margin: 15px auto;
+  }
+
+  .about-me__image {
+    padding-bottom: 15px;
+  }
+
   section {
     padding: 40px 0;
   }
-  .portfolio__filter{
+
+  .portfolio__filter {
     overflow: auto;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .portfolio__projects{
-    gap:10px;
+  .portfolio__projects {
+    gap: 10px;
     min-height: auto;
   }
 
   .portfolio__projects--image {
     padding: 5px
+  }
+
+  .footer__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__contact,
+  .footer__menu {
+    display: none;
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+      font-size: 18px;
   }
 }
 
