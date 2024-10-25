@@ -118,6 +118,7 @@ a:active {
   bottom: 10px;
   right: 20px;
   border-radius: 50px;
+  z-index: 5;
 }
 
 .go-to-top:hover {
@@ -594,12 +595,12 @@ a:active {
 .services__card--title {
   text-align: center;
   align-content: flex-start;
-  min-height: 58px;
+  height: 4rem;
 }
 
 .services__card--text {
   padding: 0rem 1rem;
-  min-height: 120px;
+  height: 8rem;
   margin: 0;
 }
 
@@ -790,10 +791,9 @@ a:active {
     margin: 15px auto;
   }
 
-  .about-me__image {
-    padding-bottom: 15px;
+  .about-me__image{
+    display: none;
   }
-
   section {
     padding: 40px 0;
   }
@@ -830,18 +830,70 @@ a:active {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero__title{
     font-size: 2rem;
   }
   .hero__subtitle{
     font-size: 1rem;
   }
+  .about-me__image{
+    display: none;
+  }
+  
+  .footer__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__contact,
+  .footer__menu {
+    display: none;
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-      font-size: 18px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .hero__title {
+  font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  .hero__image--photo {
+    width: 250px;
+  }
+  .about-me__image--photo {
+    width: 200px;
+  }
+  .services__card--title{
+    height: 6rem;
+    margin-bottom: 1rem;
+  }
+  .services__card--text{
+    height: 18rem;
+  }
+  
+  .footer__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__contact,
+  .footer__menu {
+    display: none;
+  }
+
+  .footer__copyright {
+    text-align: center;
   }
 }
 
