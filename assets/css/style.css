@@ -88,12 +88,12 @@ a:active {
 
 .btn-bd-primary:hover {
   background-color: var(--light-blue);
-  border-color: var(--light-blue);
+  border-color: var(--dark-blue);
   color: var(--white);
 }
 
 .btn {
-  border-color: var(--dark-teal);
+  border-color: var(--dark-blue);
   background-color: var(--dark-teal);
   font-weight: bold;
   color: var(--white);
@@ -103,7 +103,7 @@ a:active {
 .btn:hover,
 .btn.active {
   background-color: var(--light-blue);
-  border-color: var(--light-blue);
+  border-color: var(--dark-blue);
   color: var(--indigo);
 }
 
@@ -206,6 +206,17 @@ a:active {
 }
 
 /* About me Section */
+.about-me__title {
+  text-align: center;
+  padding-top: 30px;
+}
+.about-me__title--phrase {
+  font-family: "Atkinson-Hyperlegible-Italic-102";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  text-align: center;
+}
 
 .about-me__image {
   display: flex;
@@ -355,7 +366,6 @@ a:active {
 }
 
 .formation__cards--text {
-  text-transform: math-auto;
   min-height: 80px;
 }
 
@@ -422,7 +432,6 @@ a:active {
 .blog__card--body {
   display: flex;
   flex-direction: column;
-  align-items: revert-layer;
   justify-content: end;
 }
 
@@ -584,7 +593,7 @@ a:active {
 
 .services__card--title {
   text-align: center;
-  align-content: flex-star;
+  align-content: flex-start;
   min-height: 58px;
 }
 
@@ -822,8 +831,11 @@ a:active {
 }
 
 @media (max-width: 767px) {
-  body {
-      font-size: 16px;
+  .hero__title{
+    font-size: 2rem;
+  }
+  .hero__subtitle{
+    font-size: 1rem;
   }
 }
 
