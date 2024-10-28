@@ -856,6 +856,10 @@ a:active {
   .footer__copyright {
     text-align: center;
   }
+
+  iframe{
+    width: auto;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -894,6 +898,10 @@ a:active {
 
   .footer__copyright {
     text-align: center;
+  }
+
+  iframe{
+    width: auto;
   }
 }
 
