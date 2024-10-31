@@ -86,11 +86,18 @@ a:active {
   --bs-btn-active-border-color: var(--dark-blue);
 }
 
+.btn:hover,
 .btn-bd-primary:hover {
   background-color: var(--light-blue);
   border-color: var(--dark-blue);
   color: var(--white);
 }
+
+.btn-bd-primary:focus,
+.btn:focus {
+  border: 2px var(--white) dotted;
+}
+
 
 .btn {
   border-color: var(--dark-blue);
@@ -100,7 +107,7 @@ a:active {
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.btn:hover,
+
 .btn.active {
   background-color: var(--light-blue);
   border-color: var(--dark-blue);
@@ -124,7 +131,10 @@ a:active {
 .go-to-top:hover {
   background: var(--light-blue);
   color: var(--indigo);
+}
 
+.nav-item{
+  margin: auto 10px;
 }
 
 /* Skip to content */
@@ -204,6 +214,11 @@ a:active {
   color: var(--indigo);
   font-weight: bold;
   border-bottom: 2px solid var(--light-blue);
+}
+
+.navbar-brand__image{
+    width: 40px;
+    height: auto;
 }
 
 /* About me Section */
@@ -531,6 +546,9 @@ a:active {
   padding: 20px;
   margin: 0 auto;
 }
+.portfolio__projects--images{
+  width: 100%;
+}
 
 .portfolio__projects--overlay {
   position: absolute;
@@ -538,7 +556,7 @@ a:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(95, 108, 123, 0.888);
+  background: #50595E;
   color: white;
   display: flex;
   align-items: center;
@@ -860,6 +878,10 @@ a:active {
   iframe{
     width: auto;
   }
+
+  .nav-item{
+    text-align: center;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -902,6 +924,10 @@ a:active {
 
   iframe{
     width: auto;
+  }
+
+  .nav-item{
+    text-align: center;
   }
 }
 

@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="title">Inge Gus - Web Developer</title>
     <meta name="title" content="IngeGus">
-    <meta name="description"
-        content="Inge Gus es el sitio personal de Gustavo Adolfo Rodríguez Alonso, Web Developer Colombiano en MOODLE, Wordpress y Bootstrap">
-    <meta name="keywords"
-        content="Inge Gus, desarrollo web, diseño web, moodle, wordpress, elementor, bootstrap, colombia, acacias, villavicencio, Gustavo Adolfo Rodríguez Alonso, Gustavo Rodríguez, Inge gus">
+    <meta name="description" content="Inge Gus es el sitio personal de Gustavo Adolfo Rodríguez Alonso, Web Developer Colombiano en MOODLE, Wordpress y Bootstrap">
+    <meta name="keywords" content="Inge Gus, desarrollo web, diseño web, moodle, wordpress, elementor, bootstrap, colombia, acacias, villavicencio, Gustavo Adolfo Rodríguez Alonso, Gustavo Rodríguez, Inge gus">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Spanish">
     <meta name="author" content="Gustavo Adolfo Rodríguez Alonso - Inge Gus">
-    
+    <meta name="pagemode" content="bfcache">
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Boxicons -->
@@ -27,13 +23,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon -->
     <link href="assets/img/favicon.ico" rel="icon">
-        <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/favicon.ico">
     <!-- Precarga de foto de portada -->
     <link rel="preload" as="image" href="/assets/img/gara.webp">
-
-        
 </head>
-
 <body>
     <!-- Skip to content -->
     <div><a href="#about-me" class="cloak">Saltar al contenido</a></div>
@@ -43,9 +36,9 @@
     <header class="hero" id="home">
         <div class="row hero__container">
             <div class="col-12 col-md-8 hero__content"> <!-- Cambiado a col-12 y col-md-8 -->
-                <h1 class="hero__subtitle" data-aos="fade-right">Hola</h1>
-                <h1 class="hero__title" data-aos="fade-right" data-aos-duration="1500">Soy Gustavo Adolfo Rodríguez
-                    Alonso<br>Inge <img src="/assets/img/logo.webp" width="40" height="40" alt="logo Inge Gus">us
+                <h2 class="hero__subtitle" data-aos="fade-right">Hola</h2>
+                <h1 class="hero__title" data-aos="fade-right" data-aos-duration="1500">Soy Gustavo Adolfo Rodríguez Alonso<br>Inge
+                    <img src="/assets/img/logo.webp" width="40" height="40" alt="logo IngeGus.dev fusiona la letra G con una araña">us
                 </h1>
                 <h2 data-aos="fade-right" data-aos-duration="2000" class="hero__subtitle">Desarrollador
                     Web<br><br>MOODLE | WordPress | HTML | CSS | JavaScript | PHP |
@@ -60,10 +53,10 @@
         </div>
     </header>
     <!-- Navegation section -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Navegación principal" role="navigation">
         <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand" href="#home">
-                <img src="/assets/img/logo.webp" width="40" height="40" alt="ir a encabezado">
+                <img class="navbar-brand__image" src="/assets/img/logo.webp" width="40" height="40" alt="ir a encabezado">
                 Inge Gus
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -100,13 +93,13 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main role="main">
         <!-- About Me section -->
-        <section class="about-me" id="about-me">
+        <section class="about-me" id="about-me" aria-labelledby="Sobre mi">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 class="about-me__title">Sobre mi</h3>
+                        <h3 class="about-me__title" >Sobre mí</h3>
                         <h3 class="about-me__title--phrase">Experiencia y pasión en Desarrollo Web</h3>
                     </div>
                     <div class="col-lg-4 about-me__image">
@@ -147,10 +140,10 @@
             </div>
         </section>
         <!-- Formation section -->
-        <section class="formation" id="formation">
+        <section class="formation" id="formation" aria-labelledby="Formación">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" >
                         <h3 class="formation__title">Formación</h3>
                         <h3 class="formation__title--phrase">Cada día es una oportunidad para aprender</h3>
                         <p>He dedicado tiempo y esfuerzo a participar en una amplia gama de cursos, talleres y programas
@@ -161,9 +154,9 @@
                             industria.</p>
                     </div>
                 </div>
-                <div class="row formation--grades">
+                <div class="row formation--grades" > 
                     <div class="col-lg-6">
-                        <h4 class="formation__sub-title">Educación formal</h4>
+                        <h4 class="formation__sub-title" >Educación formal</h4>
                         <div class="formation__item">
                             <p class="formation__item--title">Especialización en Educación Superior a Distancia</p>
                             <p><em>Universidad Nacional Abierta y a Distancia - UNAD | <b>2018</b></em></p>
@@ -189,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row formation__grades">
+                <div class="row formation__grades" >
                     <div class="col-lg-12">
                         <h4 class="formation__sub-title text-center">Cursos libres</h4>
                     </div>
@@ -281,21 +274,16 @@
             </div>
         </section>
         <!-- Skills section -->
-        <section class="skills" id="skills">
+        <section class="skills" id="skills" aria-labelledby="Habilidades">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 class="skills__title">Habilidades</h3>
+                        <h3 class="skills__title" >Habilidades</h3>
                         <h3 class="skills__title--phrase">Que me permiten alcanzar mis objetivos</h3>
                         <p>Me especializo en el diseño frontend con <b>WordPress</b>, utilizando Elementor, y en la
-                            administración y
-                            personalización del <b>LMS MOODLE</b>, donde he aplicado tecnologías como <b>HTML</b>,
-                            <b>CSS</b>,
-                            <b>JavaScript</b>, <b>jQuery</b> y <b>Bootstrap</b>, este último también lo empleo en el
-                            diseño de sitios
-                            estáticos, como el que ves actualmente. Además, tengo experiencia en análisis de datos con
-                            <b>Python</b> y
-                            <b>Excel</b>, así como en su visualización mediante <b>Power BI</b> y <b>Looker Studio</b>.
+                            administración y personalización del <b>LMS MOODLE</b>, donde he aplicado tecnologías como <b>PHP</b>, <b>HTML</b>,
+                            <b>CSS</b>,<b>JavaScript</b>, <b>jQuery</b> y <b>Bootstrap</b>, este último también lo empleo en el diseño de sitios estáticos, como este. Además, tengo experiencia en análisis de datos con
+                            <b>Python</b>, <b>MySQL</b> y <b>Microsft Excel</b>, así como en su visualización mediante <b>Power BI</b> y <b>Looker Studio</b>.
                         </p>
                     </div>
 
@@ -314,13 +302,12 @@
                         <img src="/assets/img/looker.svg" alt="Google Looker Studio" class="skills__logo--image">
                         <img src="/assets/img/powerbi.svg" alt="Microsoft Power BI" class="skills__logo--image">
                         <img src="/assets/img/excel.svg" alt="Microsoft Excel" class="skills__logo--image">
-
                     </div>
                 </div>
             </div>
         </section>
         <!-- Blog section-->
-        <section class="blog" id="blog">
+        <section class="blog" id="blog" aria-labelledby="Blog">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -334,17 +321,14 @@
                 </div>
             </div>
             <div class="container">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" role="region"
-                    aria-label="Artículos destacados">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Artículos destacados">
                     <div class="carousel-indicators" id="carouselIndicators" role="tablist"></div>
-                    <div class="carousel-inner" id="rssCards" role="listbox"></div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev" aria-label="Anterior">
+                    <div class="carousel-inner" id="rssCards" role="listbox" aria-label="Artículos destacados del blog"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" aria-label="Anterior">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next" aria-label="Siguiente">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" aria-label="Siguiente">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Siguiente</span>
                     </button>
@@ -352,7 +336,7 @@
             </div>
         </section>
         <!-- Portfolio section -->
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio" id="portfolio" aria-labelledby="Portafolio">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -391,7 +375,7 @@
                                         <h4 class="modal-title">Corporación Latinoamericana de Estudios Superiores -
                                             Corpolatam</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -427,7 +411,7 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/ssBmVMDpPNw?si=DIDB1iWQzZ4o-2KX"
+                                                    src="https://www.youtube-nocookie.com/embed/ssBmVMDpPNw?si=DIDB1iWQzZ4o-2KX"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
@@ -458,7 +442,7 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/FC1sdM1zalI?si=VblppJqDD0CF19SI"
+                                                    src="https://www.youtube-nocookie.com/embed/FC1sdM1zalI?si=VblppJqDD0CF19SI"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
@@ -489,7 +473,7 @@
                                             </div>
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
-                                                <img src="/assets/img/corpolatam_redes.webp"
+                                                <img class="portfolio__projects--images" src="/assets/img/corpolatam_redes.webp"
                                                     alt="Captura de pantalla de la portada de la fanpage de Corpolatam.">
                                             </div>
                                         </div>
@@ -520,17 +504,22 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Fundación Arca de Amor Guaviare</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
-                                            <!-- Columna izquierda con el texto -->
-                                            <div class="col-lg-6">
+                                            <div class="row g-0">
+                                                <p>A esta fundación apoyo como voluntario, sin generar cobro alguno a la fundación. Se han realizado dos proyectos exitosos: Diseño web con Wordpress e Implementación de Google Workplace, conozca
+                                                    los detalles más adelante.</p>
                                                 <p><b>URL:</b> <a href="https://fadaguaviare.org" target="_blank"
                                                         aria-label="Abrir el sitio web de la Fundación Arca de Amor Guaviare en una nueva ventana">https://fadaguaviare.org</a>
                                                 </p>
                                                 <p><b>Cliente: </b> Fundación Arca de Amor Guaviare</p>
-                                                <p><b>Fecha: </b> 2023</p>
+                                                <p><b>Fecha: </b> 2023 - 2024</p>
+                                            </div>
+                                            <hr>
+                                            <!-- Columna izquierda con el texto -->
+                                            <div class="col-lg-6">
                                                 <p><b>Servicio</b> Diseño web con Wordpress</p>
                                                 <p><b>Descripción:</b> El sitio web de la Fundación Arca de Amor
                                                     Guaviare, creado en
@@ -547,13 +536,22 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/z2ASTK5kilI?si=ujlXzXItqpNm2u27"
+                                                    src="https://www.youtube-nocookie.com/embed/z2ASTK5kilI?si=ujlXzXItqpNm2u27"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
                                                     allowfullscreen></iframe>
-
                                             </div>
+                                            <hr>
+                                            <div class="col-lg-6">
+                                                <p><b>Servicio</b> Implementación de Google Workplace</p>
+                                                <p><b>Descripción:</b> Se realizó el proceso para implementar Google Workplace para instituciones sin animo de lucro. En
+                                                    el proceso de administración se generaron los correos de las personas que apoyamos a la fundación, generando la firma
+                                                    de correo, agregando la foto de perfil con marco y la configuración necesaria para el correcto funcionamiento y acceso al servicio de Gmail con
+                                                    el dominio @fadaguaviare.org. Además se agregó un botón para acceder al correo desde el sitio web.</p>
+                                            </div>
+                                            <!-- Columna derecha con el video -->
+                                            
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -582,7 +580,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Colegio Nuestra Señora de la Sabiduría Acacias</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -638,7 +636,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Sergio Suárez Palacios</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -664,7 +662,7 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/DVfKst7UBdY?si=cSYyocS5LY0wO-pu"
+                                                    src="https://www.youtube-nocookie.com/embed/DVfKst7UBdY?si=cSYyocS5LY0wO-pu"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
@@ -698,7 +696,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Provintec</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -722,7 +720,7 @@
                                             </div>
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
-                                                <img src="assets/img/orientac_sitio.webp"
+                                                <img class="portfolio__projects--images" src="assets/img/orientac_sitio.webp"
                                                     alt="Captura de pantalla del sitio web de Orientac.">
                                             </div>
                                         </div>
@@ -753,7 +751,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Provintec</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -777,7 +775,7 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/FgP1rfo-Ezk?si=i8SJkzOsilqsvOa5"
+                                                    src="https://www.youtube-nocookie.com/embed/FgP1rfo-Ezk?si=i8SJkzOsilqsvOa5"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
@@ -811,7 +809,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Mesalud</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -838,7 +836,7 @@
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
                                                 <iframe  loading="lazy"  width="560" height="315"
-                                                    src="https://www.youtube.com/embed/bMeLCAzZZtI?si=07ddBfYxEyUzh6Xf"
+                                                    src="https://www.youtube-nocookie.com/embed/bMeLCAzZZtI?si=07ddBfYxEyUzh6Xf"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     referrerpolicy="strict-origin-when-cross-origin"
@@ -872,7 +870,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title">Promotora Minera Global</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Cerrar ventana"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row g-0">
@@ -896,7 +894,7 @@
                                             </div>
                                             <!-- Columna derecha con el video -->
                                             <div class="col-lg-6">
-                                                <img src="assets/img/pmg_sitio.webp"
+                                                <img class="portfolio__projects--images" src="assets/img/pmg_sitio.webp"
                                                     alt="Captura de pantalla del sitio web de la Promotora Minera Global SAS">
                                             </div>
                                         </div>
@@ -913,7 +911,7 @@
             </div>
         </section>
         <!-- Services section -->
-        <section class="services" id="services">
+        <section class="services" id="services" aria-labelledby="Servicios">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -926,7 +924,7 @@
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Diseño de recursos educativos">
                             <div class="services__card--body">
                                 <img src="/assets/img/laptop.svg" alt="">
                                 <h4 class="services__card--title">Diseño de recursos educativos</h4>
@@ -934,12 +932,12 @@
                                     efectivas
                                     y atractivas, vinculando información y ejercicios prácticos que ayuden a sus
                                     estudiantes a alcanzar sus objetivos </p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicios de diseño de recursos educativos">Saber más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Diseño de sitios web">
                             <div class="services__card--body">
                                 <img src="/assets/img/code.svg" alt="">
                                 <h4 class="services__card--title">Diseño de sitios web</h4>
@@ -947,55 +945,55 @@
                                     garantiza la
                                     facilidad de uso y la simplicidad para su audiencia por medio de un sitio web,
                                     landing page o tienda virtual.</p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicios de diseño de sitios web">Saber más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Diseño de ambientes virtuales de aprendizaje">
                             <div class="services__card--body">
                                 <img src="/assets/img/student.svg" alt="">
                                 <h4 class="services__card--title">Diseño de ambientes virtuales de aprendizaje</h4>
                                 <p class="services__card--text"> Implemente el LMS Moodle en su entidad educativa, o
                                     mejore la que
                                     ya posee, potenciando el aprendizaje y la interacción.</p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicios de diseño de ambientes virtuales de aprendizaje">Saber más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Mejora de diseño">
                             <div class="services__card--body">
                                 <img src="/assets/img/paint.svg" alt="">
                                 <h4 class="services__card--title">Mejora de diseño</h4>
                                 <p class="services__card--text">Renueva y optimice su diseño web para una mejor
                                     experiencia de
                                     usuario, agregando seguridad y accesibilidad para llegar a más clientes.</p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicios de mejora de diseño en sitios web">Saber más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Formación en herramientas de e-Learning">
                             <div class="services__card--body">
                                 <img src="/assets/img/board.svg" alt="">
-                                <h4 class="services__card--title">Formación en herramientas de eLearning</h4>
+                                <h4 class="services__card--title">Formación en herramientas de e-Learning</h4>
                                 <p class="services__card--text">Capacite a su equipo de trabajo en herramientas
                                     digitales, como
                                     Microsoft 365, Google Workspace y Moodle.</p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicio de formación en herramientas de e-Learning">Saber más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card">
+                        <div class="card services__card" aria-labelledby="Implementación de redes sociales empresariales">
                             <div class="services__card--body">
                                 <img src="/assets/img/star.svg" alt="">
-                                <h4 class="services__card--title">Diseño de redes sociales empresariales</h4>
+                                <h4 class="services__card--title">Implementación de redes sociales empresariales</h4>
                                 <p class="services__card--text">Establezca una identidad digital sólida con redes
                                     sociales
                                     alineadas a su negocio.</p>
-                                <a href="#contact" class="btn btn-primary">Saber más</a>
+                                <a href="#contact" class="btn btn-primary" aria-label="Saber más sobre servicio de implementación de redes sociales empresariales">Saber más</a>
                             </div>
                         </div>
                     </div>
@@ -1003,7 +1001,7 @@
             </div>
         </section>
         <!-- Contact section -->
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" aria-labelledby="Contácto">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -1042,11 +1040,11 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class=" row">
                 <div class="col-lg-5 footer__about">
-                    <img src="/assets/img/logo_positivo.webp" alt="" class="footer__img">
+                    <img src="/assets/img/logo_positivo.webp" alt="Logo de ingegus.dev - Letra G estilizada con forma de araña" class="footer__img">
                     <div>
                         <p><b>Inge Gus</b> - Gustavo Adolfo Rodríguez Alonso<br>
                             Desarrollador web</p>
@@ -1092,15 +1090,13 @@
                     
                 </div>
                 <!-- Modal para Políticas de Seguridad -->
-                <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasLabel" aria-describedby="modalPoliticasContent" role="dialog" aria-hidden="true" aria-modal="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalPoliticasLabel">Políticas de Privacidad y Seguridad
                                 </h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar ventana"></button>
                             </div>
                             <div class="modal-body">
                                 <p>En <strong>Gustavo Adolfo Rodríguez Alonso - ingegus.dev</strong>, valoro la
@@ -1176,8 +1172,7 @@
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3 footer__copyright--polices">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">Políticas de Privacidad y
-                        Seguridad</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">Políticas de Privacidad y Seguridad</a>
                 </div>
             </div>
         </div>
