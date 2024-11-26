@@ -774,6 +774,16 @@ a:active {
   fill: var(--white) !important;
 }
 
+.footer__cc {
+  display:inline-block;
+}
+
+.footer__cc--icon {
+  height:22px!important;
+  margin-left:3px;
+  vertical-align:text-bottom;
+}
+
 #year,
 #site-title {
   color: var(--white);
