@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="title">Inge Gus - Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title class="title">Inge Gus - Diseño Web Accesible y Seguro en Moodle y WordPress</title>
     <meta name="title" content="IngeGus">
-    <meta name="description" content="Inge Gus es el sitio personal de Gustavo Adolfo Rodríguez Alonso, Web Developer Colombiano en MOODLE, Wordpress y Bootstrap">
-    <meta name="keywords" content="Inge Gus, desarrollo web, diseño web, moodle, wordpress, elementor, bootstrap, colombia, acacias, villavicencio, Gustavo Adolfo Rodríguez Alonso, Gustavo Rodríguez, Inge gus">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Desarrollador web experto en Moodle, WordPress y Bootstrap, combino seguridad informática y accesibilidad para sitios web de alto impacto. ¡Optimiza tu presencia en línea!">
+    <meta name="keywords" content="Inge Gus, Gustavo Adolfo Rodríguez Alonso, Diseño web WordPress elementor, Desarrollo Moodle eLearning, Freelance diseño web Colombia, Personalización WordPress Moodle, Diseño web accesible, Seguridad en sitios web">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="language" content="Spanish">
     <meta name="author" content="Gustavo Adolfo Rodríguez Alonso - Inge Gus">
     <meta name="pagemode" content="bfcache">
@@ -17,8 +17,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon -->
@@ -26,12 +24,14 @@
     <link rel="apple-touch-icon" href="assets/img/favicon.ico">
     <!-- Precarga de foto de portada -->
     <link rel="preload" as="image" href="/assets/img/gara.webp">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="6eWNMTOYWN1n5SwVej4l0tAm8DT7RMI56aqcxKikvoc"/>
 </head>
 <body>
     <!-- Skip to content -->
     <div><a href="#about-me" class="cloak">Saltar al contenido</a></div>
     <!-- Go to Up button -->
-    <span class="go-to-top bx bx-up-arrow-alt"></span>
+    <span class="go-to-top bx"><img src="/assets/img/up.svg" alt="ir arriba"></span>
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="row hero__container">
@@ -95,7 +95,7 @@
     </nav>
     <main role="main">
         <!-- About Me section -->
-        <section class="about-me" id="about-me" aria-labelledby="Sobre mi">
+        <section class="about-me" id="about-me" aria-labelledby="about-me">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -107,11 +107,12 @@
                             alt="Foto de Gustavo Adolfo Rodríguez Alonso">
                         <div class="about-me__social">
                             <a href="https://www.linkedin.com/in/ingegus/" target="_blank"
-                                aria-label="Ir a perfil en Linkedin"><i class="bx bxl-linkedin"></i></a>
-                            <a href="https://github.com/ingegus/" target="_blank" aria-label="Ir a perfil en Github"><i class="bx bxl-github"></i></a>
-                            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000163755"
-                                target="_blank" aria-label="Ir a perfil en CvLAC (Currículum Vitae
-                                      para Latinoamérica y el Caribe)"><i class="bx bx-book-reader"></i></a>
+                                aria-label="Ir a perfil en Linkedin"><img src="assets/img/linkedin.svg" alt="icono de LinkedIn"></a>
+                            <a href="https://github.com/ingegus/" target="_blank" aria-label="Ir a perfil en Github">
+                                <img src="assets/img/github.svg" alt="icono de Github"></a>
+                            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000163755" target="_blank"
+                                aria-label="Ir a perfil en CvLAC (Currículum Vitae para Latinoamérica y el Caribe)">
+                                <img src="assets/img/book_reader.svg" alt="icono de persona leyendo un libro"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-sm col-md about-me__text">
@@ -140,7 +141,7 @@
             </div>
         </section>
         <!-- Formation section -->
-        <section class="formation" id="formation" aria-labelledby="Formación">
+        <section class="formation" id="formation" aria-labelledby="formation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12" >
@@ -274,7 +275,7 @@
             </div>
         </section>
         <!-- Skills section -->
-        <section class="skills" id="skills" aria-labelledby="Habilidades">
+        <section class="skills" id="skills" aria-labelledby="skills">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -282,7 +283,7 @@
                         <h3 class="skills__title--phrase">Que me permiten alcanzar mis objetivos</h3>
                         <p>Me especializo en el diseño frontend con <b>WordPress</b>, utilizando Elementor, y en la
                             administración y personalización del <b>LMS MOODLE</b>, donde he aplicado tecnologías como <b>PHP</b>, <b>HTML</b>,
-                            <b>CSS</b>,<b>JavaScript</b>, <b>jQuery</b> y <b>Bootstrap</b>, este último también lo empleo en el diseño de sitios estáticos, como este. Además, tengo experiencia en análisis de datos con
+                            <b>CSS</b>, <b>JavaScript</b>, <b>jQuery</b> y <b>Bootstrap</b>, este último también lo empleo en el diseño de sitios estáticos, como este. Además, tengo experiencia en análisis de datos con
                             <b>Python</b>, <b>MySQL</b> y <b>Microsft Excel</b>, así como en su visualización mediante <b>Power BI</b> y <b>Looker Studio</b>.
                         </p>
                     </div>
@@ -307,7 +308,7 @@
             </div>
         </section>
         <!-- Blog section-->
-        <section class="blog" id="blog" aria-labelledby="Blog">
+        <section class="blog" id="blog" aria-labelledby="blog">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -336,7 +337,7 @@
             </div>
         </section>
         <!-- Portfolio section -->
-        <section class="portfolio" id="portfolio" aria-labelledby="Portafolio">
+        <section class="portfolio" id="portfolio" aria-labelledby="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -552,6 +553,130 @@
                                             </div>
                                             <!-- Columna derecha con el video -->
                                             
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nuestra Señora del Perpetuo Socorro 2020 -->
+                    <div class="col-lg-3 col-5 portfolio__projects--item filter moodle wordpress otro">
+                        <!-- Imagen del modal -->
+                        <div class="portfolio__projects--container">
+                            <img src="/assets/img/olph.webp" class="portfolio__projects--image"
+                                alt="Ver detalles del proyecto: Nuestra Señora del Perpetuo Socorro"
+                                role="button" data-bs-toggle="modal" data-bs-target="#olph"
+                                style="cursor: pointer;">
+                            <div class="portfolio__projects--overlay">
+                                <span>Ver detalles</span>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="olph" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Nuestra Señora del Perpetuo Socorro</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar ventana"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row g-0">
+                                            <p>A este cliente se le han desarrollado tres proyectos exitosos: Dos plataformas en Moodle y un sitio web con Wordpress conozca
+                                                los detalles más adelante.</p>
+                                            <p><b>URL:</b> <a href="https://olphformation.com/" target="_blank"
+                                                    aria-label="Abrir el sitio web de Nuestra Señora del Perpetuo Socorro en una nueva ventana">https://olphformation.com/</a>
+                                            </p>
+                                            <p><b>Cliente: </b> Nuestra Señora del Perpetuo Socorro</p>
+                                            <p><b>Fecha: </b> 2020</p>
+                                        </div>
+                                        <hr>
+                                        <!-- Proyecto Moodle -->
+                                        <div class="row g-0">
+                                            <!-- Columna izquierda con el texto -->
+                                            <div class="col-lg-6">
+                                                <p><b>Servicio</b> Diseño web con Moodle - Campus Afirma</p>
+                                                <p><b>Descripción:</b> Sitio web de formación religiosa utilizando el tema eGuru, completamente personalizado para
+                                                    reflejar la identidad única de la institución, presentandolo en inglés y español, y vinculando sus redes sociales y
+                                                    el sitio web. Además, se diseño una estructura educativa sólida con cursos interactivos enriquecidos por recursos
+                                                    H5P enfocados a tres niveles de formación distribuidos de la siguiente forma: El primero para niños menores de 10
+                                                    años que toman la Primera comunión, el segundo para niños mayores de 10 años que toman la Confirmación, y el tercero
+                                                    para adultos que inician su formación Católica.
+                                                    <br>
+                                                    Por otra parte, se realizó un video de presentación, ubicado en la página inicial, donde se destaca la misión del
+                                                    proyecto y finalmente, el sitio contó con
+                                                    una política de seguridad lo cual disminuyo los riesgos de ataques informáticos.
+                                                </p>
+                                            </div>
+                                            <!-- Columna derecha con el video -->
+                                            <div class="col-lg-6">
+                                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+                                                            <img src="assets/img/olph_afirma.webp" class="d-block w-100" alt="Portada del campus Afirma.">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <img src="assets/img/olph_afirma_h5p.webp" class="d-block w-100" alt="Recurso diseñado en H5P para niños que toman la Primera comunión.">
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <img src="assets/img/olph_afirma_ingles.webp" class="d-block w-100" alt="Portada del curso en ingles, donde se presenta el video de bienvenida.">
+                                                        </div>
+                                                    </div>
+                                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Anterior</span>
+                                                    </button>
+                                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="visually-hidden">Siguiente</span>
+                                                    </button>
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <!-- Proyecto Wordpress -->
+                                        <div class="row g-0">
+                                            <!-- Columna izquierda con el texto -->
+                                            <div class="col-lg-6">
+                                                <p><b>Servicio</b> Diseño web con Wordpress - Landing page OLPH Formation</p>
+                                                <p><b>Descripción:</b> Landing page del Campus virtual <b>OLPH Formation</b>, donde se presenta la razón social de la empresa,
+                                                    servicios, formación, metodología y demás datos de contacto. De igual forma se vincula un botón para acceder al
+                                                    campus virtual diseñado.</p>
+                                            </div>
+                                            <!-- Columna derecha con el video -->
+                                            <div class="col-lg-6">
+                                                <img class="portfolio__projects--images" src="/assets/img/olph_formation.webp"
+                                                    alt="Captura de pantalla de la portada de la landing page.">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <!-- Proyecto Moodle -->
+                                        <div class="row g-0">
+                                            <!-- Columna izquierda con el texto -->
+                                            <div class="col-lg-6">
+                                                <p><b>Servicio</b> Diseño web con Moodle - OLPH Formation</p>
+                                                <p><b>Descripción:</b> Desarrolló de un sitio web de formación religiosa en Moodle, especialmente diseñado para la
+                                                    enseñanza católica dirigida a niños, jóvenes y adultos. Para esta labor se utilizó y personalizó el tema Moove,
+                                                    creando una estructura educativa sólida con cursos interactivos enriquecidos mediante la herramienta H5P. Además se
+                                                    implementó plugins avanzados para el monitoreo de la usabilidad del servicio, optimización de la página inicial y
+                                                    cambios en la interfaz de inicio de sesión, asegurando un diseño responsive que garantiza una experiencia de
+                                                    aprendizaje accesible y atractiva en cualquier dispositivo.
+                                                </p>
+                                            </div>
+                                            <!-- Columna derecha con el video -->
+                                            <div class="col-lg-6">
+                                                <img class="portfolio__projects--images" src="/assets/img/olph_formation_campus.webp"
+                                                    alt="Captura de pantalla del inicio de sesión del LMS">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -911,7 +1036,7 @@
             </div>
         </section>
         <!-- Services section -->
-        <section class="services" id="services" aria-labelledby="Servicios">
+        <section class="services" id="services" aria-labelledby="services">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -924,7 +1049,7 @@
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Diseño de recursos educativos">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/laptop.svg" alt="">
                                 <h4 class="services__card--title">Diseño de recursos educativos</h4>
@@ -937,7 +1062,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Diseño de sitios web">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/code.svg" alt="">
                                 <h4 class="services__card--title">Diseño de sitios web</h4>
@@ -950,7 +1075,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Diseño de ambientes virtuales de aprendizaje">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/student.svg" alt="">
                                 <h4 class="services__card--title">Diseño de ambientes virtuales de aprendizaje</h4>
@@ -962,7 +1087,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Mejora de diseño">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/paint.svg" alt="">
                                 <h4 class="services__card--title">Mejora de diseño</h4>
@@ -974,7 +1099,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Formación en herramientas de e-Learning">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/board.svg" alt="">
                                 <h4 class="services__card--title">Formación en herramientas de e-Learning</h4>
@@ -986,7 +1111,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card services__card" aria-labelledby="Implementación de redes sociales empresariales">
+                        <div class="card services__card">
                             <div class="services__card--body">
                                 <img src="/assets/img/star.svg" alt="">
                                 <h4 class="services__card--title">Implementación de redes sociales empresariales</h4>
@@ -1001,7 +1126,7 @@
             </div>
         </section>
         <!-- Contact section -->
-        <section class="contact" id="contact" aria-labelledby="Contácto">
+        <section class="contact" id="contact" aria-labelledby="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"></div>
@@ -1050,13 +1175,33 @@
                             Desarrollador web</p>
                     </div>
                     <div class="footer__social">
-                        <a href="https://www.linkedin.com/in/ingegus/" target="_blank"
-                            aria-label="Ir a perfil en Linkedin"><i class="bx bxl-linkedin"></i></a>
-                        <a href="https://github.com/ingegus/" target="_blank" aria-label="Ir a perfil en Github"><i
-                                class='bx bxl-github'></i></a>
-                        <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000163755"
-                            target="_blank" aria-label="Ir a perfil en CvLAC (Currículum Vitae
-                              para Latinoamérica y el Caribe)"><i class='bx bx-book-reader'></i></a>
+                        <a href="https://www.linkedin.com/in/ingegus/" target="_blank" aria-label="Ir a perfil en Linkedin">
+                            <svg class="footer__social--icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(14, 59, 67, 1);transform: ;msFilter:;">
+                                <circle cx="4.983" cy="5.009" r="2.188"></circle>
+                                <path
+                                    d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/ingegus/" target="_blank" aria-label="Ir a perfil en Github">
+                            <svg class="footer__social--icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(14, 59, 67, 1);transform: ;msFilter:;">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000163755" target="_blank"
+                            aria-label="Ir a perfil en CvLAC (Currículum Vitae para Latinoamérica y el Caribe)">
+                            <svg class="footer__social--icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(14, 59, 67, 1);transform: ;msFilter:;">
+                                <path
+                                    d="M21 8c-.202 0-4.85.029-9 2.008C7.85 8.029 3.202 8 3 8a1 1 0 0 0-1 1v9.883a1 1 0 0 0 .305.719c.195.188.48.305.729.28l.127-.001c.683 0 4.296.098 8.416 2.025.016.008.034.005.05.011.119.049.244.083.373.083s.254-.034.374-.083c.016-.006.034-.003.05-.011 4.12-1.928 7.733-2.025 8.416-2.025l.127.001c.238.025.533-.092.729-.28.194-.189.304-.449.304-.719V9a1 1 0 0 0-1-1zM4 10.049c1.485.111 4.381.48 7 1.692v7.742c-3-1.175-5.59-1.494-7-1.576v-7.858zm16 7.858c-1.41.082-4 .401-7 1.576v-7.742c2.619-1.212 5.515-1.581 7-1.692v7.858z">
+                                </path>
+                                <circle cx="12" cy="5" r="3"></circle>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
@@ -1098,7 +1243,7 @@
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar ventana"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body" id="modalPoliticasContent">
                                 <p>En <strong>Gustavo Adolfo Rodríguez Alonso - ingegus.dev</strong>, valoro la
                                     privacidad de los usuarios y me comprometo a proteger sus datos personales. A
                                     continuación, se detalla cómo se manejan y protegen los datos que nos proporciona
@@ -1187,8 +1332,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <!--AOS: Animate On Scroll Library-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" nonce="random123" ></script>
+    <script nonce="random123">AOS.init();</script>
 </body>
-
 </html>
