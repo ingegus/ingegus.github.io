@@ -10,7 +10,7 @@ $(document).ready(function () {
         const thumbnail = firstImage || 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Medium_Logo.webp';
 
         return `
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" role="option" aria-label="Artículo ${index + 1}">
                 <div class="blog__card h-100">
                     <img src="${thumbnail}" class="blog__card--img" alt="Imagen del artículo ${index + 1}">
                     <div class="blog__card--body">
@@ -25,7 +25,7 @@ $(document).ready(function () {
     function createIndicators(numSlides) {
         let indicatorsHtml = '';
         for (let i = 0; i < numSlides; i++) {
-            indicatorsHtml += `<ul><li data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" aria-label="Slide ${i + 1}"></li></ul>`;
+            indicatorsHtml += `<ul><li data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" role="tab" aria-label="Slide ${i + 1}"></li></ul>`;
         }
         return indicatorsHtml;
     }
