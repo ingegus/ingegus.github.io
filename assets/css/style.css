@@ -544,6 +544,7 @@ a:active {
   height: auto;
   padding: 20px;
   margin: 0 auto;
+  cursor: pointer;
 }
 .portfolio__projects--images{
   width: 100%;
@@ -769,6 +770,9 @@ a:active {
 .footer__social a:hover {
   background: var(--light-blue);
   text-decoration: none;
+}
+.footer__social--icon{
+  fill: rgba(14, 59, 67, 1);
 }
 .footer__social a:hover .footer__social--icon {
   fill: var(--white) !important;
