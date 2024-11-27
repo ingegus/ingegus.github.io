@@ -25,7 +25,7 @@ $(document).ready(function () {
     function createIndicators(numSlides) {
         let indicatorsHtml = '<ul class="carousel-indicators" role="tablist">';
         for (let i = 0; i < numSlides; i++) {
-            indicatorsHtml += `<li data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" role="tab" aria-controls="slide-${i}" aria-label="Slide ${i + 1}" tabindex="0"></li>`;
+            indicatorsHtml += `<li data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" role="tab" aria-controls="slide-${i + 1}" aria-label="Slide ${i + 1}" tabindex="0"></li>`;
         }
         indicatorsHtml += '</ul>';
         return indicatorsHtml;
