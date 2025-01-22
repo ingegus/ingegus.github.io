@@ -56,7 +56,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Navegación principal" role="navigation">
         <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand" href="#home">
-                <img class="navbar-brand__image" src="/assets/img/logo.webp" width="40" height="40" alt="ir a encabezado">
+                <img class="navbar-brand__image" src="/assets/img/logo.webp" alt="ir a encabezado">
                 Inge Gus
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -65,30 +65,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link nav-link--active" href="#home">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-me">Sobre mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#formation">Formación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Habilidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link--active" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-me">Sobre mi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formation">Formación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -356,6 +340,67 @@
                     </div>
                 </div>
                 <div class=" row portfolio__projects">
+                    <!-- Innova 2023 -->
+                    <div class="col-lg-3 col-5 portfolio__projects--item filter wordpress">
+                        <!-- Imagen del modal -->
+                        <div class="portfolio__projects--container">
+                            <img src="/assets/img/innova.webp" class="portfolio__projects--image"
+                                alt="Ver detalles del proyecto: Innova educación y formación laboral" role="button" data-bs-toggle="modal"
+                                data-bs-target="#innova" loading="lazy">
+                            <div class="portfolio__projects--overlay">
+                                <span>Ver detalles</span>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="innova" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Innova educación y formación laboral</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar ventana"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row g-0">
+                                            <!-- Columna izquierda con el texto -->
+                                            <div class="col-lg-6">
+                                                <p><b>URL:</b> <a href="https://innovaeducacion.com.co" target="_blank"
+                                                        aria-label="Abrir el sitio web de Innova educación y formación laboral en una nueva ventana">https://innovaeducacion.com.co</a>
+                                                </p>
+                                                <p><b>Cliente: </b>Innova educación y formación laboral</p>
+                                                <p><b>Fecha: </b> 2023</p>
+                                                <p><b>Servicio</b> Diseño web con Wordpress</p>
+                                                <p><b>Descripción: </b>Sitio web diseñado en WordPress implementando la suite LearnPress con
+                                                    el tema Eduma. En este proyecto se han realizado diferentes mejoras personalizadas por medio de PHP, entre las
+                                                    cuales están
+                                                <ul>
+                                                    <li>Generación de código QR para el certificado, ya que esto no lo trae por defecto.</li>
+                                                    <li>Cambio de idioma de LearnPress al español, ya que varios textos y botones salen en inglés.</li>
+                                                    <li>Capturar nombre, correo, telefono, ID desde el formulario de registro</li>
+                                                </ul>
+                                                El sitio se diseño con los colores corporativos, al igual que se capacito en la creación
+                                                de los diferentes cursos, cargue de contenidos utilizando la herramienta H5P y creación de
+                                                cuestionarios. Además se implemento una tienda virtual para la venta y activación automática de los usuarios
+                                                al momento de adquirir los diferentes cursos ofertados. Finalmente se implemento un canal de comunicación por medio
+                                                de WhatsApp y se vincularon los perfiles de las redes sociales.</p>
+                                            </div>
+                                            <!-- Columna derecha con el video -->
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe loading="lazy" class="portfolio__projects--youtube"
+                                                    src="https://www.youtube-nocookie.com/embed/9qTh8e0vYdQ?si=TAKRwmTCOTQ0biN5"
+                                                    title="YouTube video player"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Corpolatam Moodle 2023 -->
                     <div class="col-lg-3 col-5 portfolio__projects--item filter moodle wordpress otro">
                         <!-- Imagen del modal -->
@@ -409,8 +454,8 @@
                                                 </p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/ssBmVMDpPNw?si=DIDB1iWQzZ4o-2KX"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -440,8 +485,8 @@
                                                     potenciales.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/FC1sdM1zalI?si=VblppJqDD0CF19SI"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -472,8 +517,8 @@
                                                 </p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <img class="portfolio__projects--images" src="/assets/img/corpolatam_redes.webp"
+                                            <div class="col-lg-6 portfolio__projects--images">
+                                                <img src="/assets/img/corpolatam_redes.webp"
                                                     alt="Captura de pantalla de la portada de la fanpage de Corpolatam."  loading="lazy">
                                             </div>
                                         </div>
@@ -534,8 +579,8 @@
                                                     de sus accione</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/z2ASTK5kilI?si=ujlXzXItqpNm2u27"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -652,8 +697,8 @@
                                                     campus virtual diseñado.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <img class="portfolio__projects--images" src="/assets/img/olph_formation.webp"
+                                            <div class="col-lg-6 portfolio__projects--images">
+                                                <img src="/assets/img/olph_formation.webp"
                                                     alt="Captura de pantalla de la portada de la landing page." loading="lazy">
                                             </div>
                                         </div>
@@ -672,8 +717,8 @@
                                                 </p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <img class="portfolio__projects--images" src="/assets/img/olph_formation_campus.webp"
+                                            <div class="col-lg-6 portfolio__projects--images">
+                                                <img src="/assets/img/olph_formation_campus.webp"
                                                     alt="Captura de pantalla del inicio de sesión del LMS" loading="lazy">
                                             </div>
                                         </div>
@@ -784,8 +829,8 @@
                                                     proporcionando contenido dinámico y actualizado.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/DVfKst7UBdY?si=cSYyocS5LY0wO-pu"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -843,8 +888,8 @@
                                                     experiencia de usuario moderna y accesible.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <img class="portfolio__projects--images" src="assets/img/orientac_sitio.webp"
+                                            <div class="col-lg-6 portfolio__projects--images">
+                                                <img src="assets/img/orientac_sitio.webp"
                                                     alt="Captura de pantalla del sitio web de Orientac." loading="lazy">
                                             </div>
                                         </div>
@@ -897,8 +942,8 @@
                                                     reforzar la identidad visual de la empresa.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/FgP1rfo-Ezk?si=i8SJkzOsilqsvOa5"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -958,8 +1003,8 @@
                                                     cliente.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <iframe  loading="lazy"  width="560" height="315"
+                                            <div class="col-lg-6 portfolio__projects--video">
+                                                <iframe  loading="lazy"  class="portfolio__projects--youtube"
                                                     src="https://www.youtube-nocookie.com/embed/bMeLCAzZZtI?si=07ddBfYxEyUzh6Xf"
                                                     title="YouTube video player"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1017,8 +1062,8 @@
                                                     asegurando accesibilidad y alcance global.</p>
                                             </div>
                                             <!-- Columna derecha con el video -->
-                                            <div class="col-lg-6">
-                                                <img class="portfolio__projects--images" src="assets/img/pmg_sitio.webp"
+                                            <div class="col-lg-6 portfolio__projects--images">
+                                                <img src="assets/img/pmg_sitio.webp"
                                                     alt="Captura de pantalla del sitio web de la Promotora Minera Global SAS" loading="lazy">
                                             </div>
                                         </div>

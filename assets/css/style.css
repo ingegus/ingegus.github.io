@@ -547,7 +547,14 @@ a:active {
   cursor: pointer;
 }
 .portfolio__projects--images{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio__projects--images img {
   width: 100%;
+  max-width: fit-content;
 }
 
 .portfolio__projects--overlay {
@@ -578,6 +585,20 @@ a:active {
   text-transform: uppercase;
   color: white;
 }
+
+.portfolio__projects--video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio__projects--youtube {
+  width: 100%;
+  height: auto;
+  max-width: 560px; /* Tamaño máximo del iframe */
+  aspect-ratio: 16 / 9; /* Proporción para videos */
+}
+
 
 /* Services section */
 
@@ -845,6 +866,10 @@ a:active {
     padding: 5px
   }
 
+  .contact__cards {
+    gap: 2rem;
+  }
+
   .footer__about {
     display: flex;
     flex-direction: column;
@@ -872,6 +897,10 @@ a:active {
   .about-me__image{
     display: none;
   }
+
+  .contact__cards {
+    gap: 2rem;
+  }
   
   .footer__about {
     display: flex;
@@ -896,6 +925,8 @@ a:active {
   .nav-item{
     text-align: center;
   }
+
+  
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -918,6 +949,10 @@ a:active {
   }
   .services__card--text{
     height: 18rem;
+  }
+
+  .contact__cards {
+    gap: 2rem;
   }
   
   .footer__about {
