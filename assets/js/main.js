@@ -1,6 +1,6 @@
 $(document).ready(function () {
     /*---- Feed RSS ----*/
-    const mediumUrl = 'https://ingegus.medium.com';
+    const mediumUrl = 'https://ingegus.medium.com/';
     const numPostsToShow = 6;
     const feedUrl = `https://api.rss2json.com/v1/api.json?rss_url=${mediumUrl}/feed`;
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
         const thumbnail = firstImage || 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Medium_Logo.webp';
 
         return `
-            <div class="col-md-4 mb-4" role="option" aria-label="Artículo ${index + 1}">
+            <div class="col-md-4 mb-4">
                 <div class="blog__card h-100">
                     <img src="${thumbnail}" class="blog__card--img" alt="Imagen del artículo ${index + 1}">
                     <div class="blog__card--body">
@@ -23,13 +23,22 @@ $(document).ready(function () {
 
     // Crear indicadores del carrusel
     function createIndicators(numSlides) {
-        let indicatorsHtml = '<ul class="carousel-indicators" role="tablist">';
+        let indicatorsHtml = '<div class="carousel-indicators" role="tablist">';
         for (let i = 0; i < numSlides; i++) {
-            indicatorsHtml += `<li data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" class="${i === 0 ? 'active' : ''}" role="tab" aria-controls="slide-${i + 1}" aria-label="Slide ${i + 1}" tabindex="0"></li>`;
+            indicatorsHtml += `<button 
+                type="button" 
+                data-bs-target="#carouselExampleControls" 
+                data-bs-slide-to="${i}" 
+                class="${i === 0 ? 'active' : ''}" 
+                role="tab" 
+                aria-label="Slide ${i + 1}" 
+                aria-selected="${i === 0 ? 'true' : 'false'}">
+            </button>`;
         }
-        indicatorsHtml += '</ul>';
+        indicatorsHtml += '</div>';
         return indicatorsHtml;
     }
+    
 
     // Cargar y mostrar tarjetas RSS
     function loadRssCards() {
@@ -40,7 +49,8 @@ $(document).ready(function () {
                     const rssCardsContainer = $('#rssCards');
                     let html = '';
                     for (let i = 0; i < items.length; i += 3) {
-                        html += `<div class="carousel-item ${i === 0 ? 'active' : ''}"><div class="row">`;
+                        html += `<div class="carousel-item ${i === 0 ? 'active' : ''}" role="tabpanel" id="slide-${i + 1}">
+                                    <div class="row">`;
                         for (let j = i; j < i + 3 && j < items.length; j++) {
                             html += createCard(items[j], j);
                         }
