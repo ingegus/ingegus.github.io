@@ -117,6 +117,11 @@ a:active {
   color: var(--light-blue);
 }
 
+a:focus {
+  border: 2px var(--indigo) dotted;
+  border-radius: 4px;
+}
+
 /* Buttons */
 .btn-bd-primary {
   --bs-btn-font-weight: 300;
@@ -173,11 +178,17 @@ a:active {
   right: 20px;
   border-radius: 50px;
   z-index: 5;
+  border: 1px solid var(--dark-teal);
 }
 
 .go-to-top:hover {
   background: var(--light-blue);
   color: var(--indigo);
+  border: 1px solid var(--light-blue);
+}
+
+.go-to-top:focus {
+  border: 2px var(--indigo) dotted;
 }
 
 .nav-item{
@@ -541,7 +552,11 @@ a:active {
   border-radius: 50%;
   background-size: 0.6rem;
   background-color: var(--light-blue);
+  width: 30px;
+  height: 30px;
 }
+
+
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -555,8 +570,32 @@ a:active {
   bottom: -1rem;
 }
 
+.carousel-indicators [data-bs-target]:focus,
+.carousel-indicators button:focus,
+.carousel-indicators .active:focus {
+  border: 2px var(--indigo) dotted;
+}
+
 .carousel-indicators li {
   background-color: var(--dark-blue);
+}
+
+.carousel-indicators [data-bs-target]{
+  border-radius: 5px;
+  width: 3vh;
+  height: .8vh;
+  background-color: var(--gray);
+}
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: var(--light-blue);
 }
 
 /* Portfolio Section */
@@ -889,7 +928,7 @@ a:active {
 }
 /* Testimonios */
 .testimonials {
-  background-color: var(--white); /* Color principal */
+  background-color: var(--white); 
   position: relative;
   padding: 3rem 0;
 }
@@ -930,38 +969,7 @@ a:active {
   min-height: 7vh;
 }
 
-.carousel-indicators [data-bs-target]{
-  border-radius: 5px;
-  width: 3vh;
-  height: .8vh;
-}
-.carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #6c757d;
-  border: none;
-}
 
-.carousel-indicators .active {
-  background-color: var(--light-blue);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--light-blue);
-  border-radius: 50%;
-}
-
-.carousel-control-prev-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.carousel-control-next-icon {
-  width: 30px;
-  height: 30px;
-}
 
 /* Styles for smartphones */
 

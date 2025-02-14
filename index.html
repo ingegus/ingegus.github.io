@@ -26,10 +26,13 @@
     <meta name="google-site-verification" content="6eWNMTOYWN1n5SwVej4l0tAm8DT7RMI56aqcxKikvoc"/>
 </head>
 <body>
-    <!-- Skip to content -->
+   <!-- Skip to content y botón de ir arriba dentro de una landmark -->
+<nav aria-label="Accesos rápidos">
     <div><a href="#about-me" class="cloak">Saltar al contenido</a></div>
-    <!-- Go to Up button -->
-    <span class="go-to-top bx"><img src="/assets/img/up.svg" alt="ir arriba"></span>
+    <button class="go-to-top bx" aria-label="Ir arriba">
+        <img src="/assets/img/up.svg" alt="">
+    </button>
+</nav>
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="row hero__container">
@@ -51,14 +54,14 @@
         </div>
     </header>
     <!-- Navegation section -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Navegación principal" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Navegación principal">
         <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand" href="#home">
                 <img class="navbar-brand__image" src="/assets/img/logo.webp" alt="ir a encabezado">
                 Inge Gus
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -75,7 +78,7 @@
             </div>
         </div>
     </nav>
-    <main role="main">
+    <main>
         <!-- About Me section -->
         <section class="about-me" id="about-me" aria-labelledby="about-me-title">
             <div class="container">
@@ -181,7 +184,7 @@
                                     <p class="formation__cards--footer">Obtenida: 22/09/2024</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://api.badgr.io/public/assertions/or4qTRauTRq8LmZe0peb6w?identity__email=gustavo.rodriguez%40hotmail.es"
-                                        target="_blank" rel="noopener noreferrer">Ver insignia</a>
+                                        target="_blank" rel="noopener noreferrer" aria-label="Ver insignia de Moodle Developer Basics">Ver insignia</a>
                                 </div>
                             </div>
                             <!-- Life Long Learning -->
@@ -193,7 +196,7 @@
                                     <p class="formation__cards--footer">Obtenida: 17/03/2023</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://www.credly.com/badges/b26df877-888a-4137-9974-4e1ffa1cd27b"
-                                        target="_blank" rel="noopener noreferrer">Ver insignia</a>
+                                        target="_blank" rel="noopener noreferrer" aria-label="Ver insignia de Lifelog Learning de Certiprof">Ver insignia</a>
                                 </div>
                             </div>
                             <!-- Python Data Manipulation -->
@@ -206,7 +209,7 @@
                                     <p class="formation__cards--footer">obtenida: 11/09/2021</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://www.datacamp.com/completed/statement-of-accomplishment/track/f5f62d09d510269b466b048bea3ca123dff95d48"
-                                        target="_blank" rel="noopener noreferrer">Ver insignia</a>
+                                        target="_blank" rel="noopener noreferrer" aria-label="Ver insignia de Python Data Manipulation">Ver insignia</a>
                                 </div>
                             </div>
                             <!-- Python Data Fundamentals -->
@@ -220,7 +223,7 @@
                                     <p class="formation__cards--footer">Obtenida: 02/05/2020</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://www.datacamp.com/completed/statement-of-accomplishment/track/757a212d1619168302e88e0d9bcd3527c619afe8"
-                                        target="_blank" rel="noopener noreferrer">Ver insignia</a>
+                                        target="_blank" rel="noopener noreferrer" aria-label="Ver insignia de Python Data Fundamentals">Ver insignia</a>
                                 </div>
                             </div>
                             <!-- Código facilito -->
@@ -234,7 +237,7 @@
                                     <p class="formation__cards--footer">Obtenida: Desde 2024</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://codigofacilito.com/usuarios/ingegus" target="_blank"
-                                        rel="noopener noreferrer">Ver insignias</a>
+                                        rel="noopener noreferrer" aria-label="Ver todas las insignias en Código Facilito">Ver insignias</a>
                                 </div>
                             </div>
                             <!-- Microsoft Learn -->
@@ -248,7 +251,7 @@
                                     <p class="formation__cards--footer">Obtenida: Desde 2018</p>
                                     <a class="btn btn-bd-primary mt-auto"
                                         href="https://learn.microsoft.com/es-es/users/ingegus/" target="_blank"
-                                        rel="noopener noreferrer">Ver insignias</a>
+                                        rel="noopener noreferrer" aria-label="Ver todas las insignias en Microsoft Learn">Ver insignias</a>
                                 </div>
                             </div>
                         </div>
@@ -322,7 +325,7 @@
         <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12"></div>
+                    <div class="col-lg-12">
                     <h3 id="portfolio-title" class="portfolio__title">Portafolio</h3>
                     <h3 class="portfolio__title--phrase">Nada mejor que practicar</h3>
                     <p>He realizado diferentes proyectos, contratados y personales, aquí podrá conocerlos.</p>
@@ -362,13 +365,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL: </spam><a href="https://innovaeducacion.com.co" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL: </span><a href="https://innovaeducacion.com.co" target="_blank"
                                                         aria-label="Abrir el sitio web de Innova educación y formación laboral en una nueva ventana">https://innovaeducacion.com.co</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam>Innova educación y formación laboral</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2023</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio: </spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Sitio web diseñado en WordPress implementando la suite LearnPress con
+                                                <p><span class="portfolio__projects--caption">Cliente: </span>Innova educación y formación laboral</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2023</p>
+                                                <p><span class="portfolio__projects--caption">Servicio: </span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Sitio web diseñado en WordPress implementando la suite LearnPress con
                                                     el tema Eduma. En este proyecto se han realizado diferentes mejoras personalizadas por medio de PHP, entre las
                                                     cuales están
                                                 <ul>
@@ -425,20 +428,20 @@
                                             <p>A este cliente se le han desarrollado tres proyectos exitosos: Diseño web
                                                 con Moodle, Diseño web con Wordpress y Diseño de redes sociales, conozca
                                                 los detalles más adelante.</p>
-                                            <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://www.corpolatam.com/" target="_blank"
+                                            <p><span class="portfolio__projects--caption">URL:</span> <a href="https://www.corpolatam.com/" target="_blank"
                                                     aria-label="Abrir el sitio web de la Corporación Latinoamericana de Estudios Superiores - Corpolatam en una nueva ventana">https://www.corpolatam.com/</a>
                                             </p>
-                                            <p><spam class="portfolio__projects--caption">Cliente: </spam> Corporación Latinoamericana de Estudios Superiores -
+                                            <p><span class="portfolio__projects--caption">Cliente: </span> Corporación Latinoamericana de Estudios Superiores -
                                                 Corpolatam</p>
-                                            <p><spam class="portfolio__projects--caption">Fecha: </spam> 2023</p>
+                                            <p><span class="portfolio__projects--caption">Fecha: </span> 2023</p>
                                         </div>
                                         <hr>
                                         <!--Proyecto Moodle-->
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio: </spam>Diseño web con Moodle</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>El proyecto en Moodle se centró en
+                                                <p><span class="portfolio__projects--caption">Servicio: </span>Diseño web con Moodle</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>El proyecto en Moodle se centró en
                                                     la creación de una plataforma de formación profesional. El sistema
                                                     permite a los usuarios acceder a los diplomados
                                                     adquiridos previamente en la tienda virtual, brindando una
@@ -466,8 +469,8 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> A este cliente se le han desarrollado tres
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> A este cliente se le han desarrollado tres
                                                     proyectos exitosos. En este caso, se llevó a cabo un
                                                     diseño integral con WordPress, destacando la imagen corporativa de
                                                     la empresa y asegurando una experiencia
@@ -497,8 +500,8 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño de redes sociales</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> A este cliente se le han desarrollado tres
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño de redes sociales</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> A este cliente se le han desarrollado tres
                                                     proyectos exitosos. En este proyecto para el cliente,
                                                     se llevaron a cabo tres etapas clave enfocadas en la creación y
                                                     vinculación de redes sociales en Facebook, Instagram, YouTube y
@@ -554,17 +557,17 @@
                                             <div class="row g-0">
                                                 <p>A esta fundación apoyo como voluntario, sin generar cobro alguno a la fundación. Se han realizado dos proyectos exitosos: Diseño web con Wordpress e Implementación de Google Workplace, conozca
                                                     los detalles más adelante.</p>
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://fadaguaviare.org" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://fadaguaviare.org" target="_blank"
                                                         aria-label="Abrir el sitio web de la Fundación Arca de Amor Guaviare en una nueva ventana">https://fadaguaviare.org</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Fundación Arca de Amor Guaviare</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2023 - 2024</p>
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Fundación Arca de Amor Guaviare</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2023 - 2024</p>
                                             </div>
                                             <hr>
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> El sitio web de la Fundación Arca de Amor
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> El sitio web de la Fundación Arca de Amor
                                                     Guaviare, creado en
                                                     WordPress, destaca el trabajo con las comunidades indígenas del
                                                     Guaviare. Con un
@@ -587,8 +590,8 @@
                                             </div>
                                             <hr>
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Implementación de Google Workplace</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> Se realizó el proceso para implementar Google Workplace para instituciones sin animo de lucro. En
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Implementación de Google Workplace</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> Se realizó el proceso para implementar Google Workplace para instituciones sin animo de lucro. En
                                                     el proceso de administración se generaron los correos de las personas que apoyamos a la fundación, generando la firma
                                                     de correo, agregando la foto de perfil con marco y la configuración necesaria para el correcto funcionamiento y acceso al servicio de Gmail con
                                                     el dominio @fadaguaviare.org. Además se agregó un botón para acceder al correo desde el sitio web.</p>
@@ -630,19 +633,19 @@
                                         <div class="row g-0">
                                             <p>A este cliente se le han desarrollado tres proyectos exitosos: Dos plataformas en Moodle y un sitio web con Wordpress conozca
                                                 los detalles más adelante.</p>
-                                            <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://olphformation.com/" target="_blank"
+                                            <p><span class="portfolio__projects--caption">URL:</span> <a href="https://olphformation.com/" target="_blank"
                                                     aria-label="Abrir el sitio web de Nuestra Señora del Perpetuo Socorro en una nueva ventana">https://olphformation.com/</a>
                                             </p>
-                                            <p><spam class="portfolio__projects--caption">Cliente: </spam> Nuestra Señora del Perpetuo Socorro</p>
-                                            <p><spam class="portfolio__projects--caption">Fecha: </spam> 2020</p>
+                                            <p><span class="portfolio__projects--caption">Cliente: </span> Nuestra Señora del Perpetuo Socorro</p>
+                                            <p><span class="portfolio__projects--caption">Fecha: </span> 2020</p>
                                         </div>
                                         <hr>
                                         <!-- Proyecto Moodle -->
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Moodle - Campus Afirma</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> Sitio web de formación religiosa utilizando el tema eGuru, completamente personalizado para
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Moodle - Campus Afirma</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> Sitio web de formación religiosa utilizando el tema eGuru, completamente personalizado para
                                                     reflejar la identidad única de la institución, presentandolo en inglés y español, y vinculando sus redes sociales y
                                                     el sitio web. Además, se diseño una estructura educativa sólida con cursos interactivos enriquecidos por recursos
                                                     H5P enfocados a tres niveles de formación distribuidos de la siguiente forma: El primero para niños menores de 10
@@ -689,8 +692,8 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress - Landing page OLPH Formation</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> Landing page del Campus virtual <spam class="portfolio__projects--caption">OLPH Formation</spam>, donde se presenta la razón social de la empresa,
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress - Landing page OLPH Formation</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> Landing page del Campus virtual <span class="portfolio__projects--caption">OLPH Formation</span>, donde se presenta la razón social de la empresa,
                                                     servicios, formación, metodología y demás datos de contacto. De igual forma se vincula un botón para acceder al
                                                     campus virtual diseñado.</p>
                                             </div>
@@ -705,8 +708,8 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Moodle - OLPH Formation</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción:</spam> Desarrolló de un sitio web de formación religiosa en Moodle, especialmente diseñado para la
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Moodle - OLPH Formation</p>
+                                                <p><span class="portfolio__projects--caption">Descripción:</span> Desarrolló de un sitio web de formación religiosa en Moodle, especialmente diseñado para la
                                                     enseñanza católica dirigida a niños, jóvenes y adultos. Para esta labor se utilizó y personalizó el tema Moove,
                                                     creando una estructura educativa sólida con cursos interactivos enriquecidos mediante la herramienta H5P. Además se
                                                     implementó plugins avanzados para el monitoreo de la usabilidad del servicio, optimización de la página inicial y
@@ -753,10 +756,10 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Colegio Nuestra Señora de la Sabiduría Acacias</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2020</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Formación e implementación Office365</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Implementación del sistema Office365 en el plan
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Colegio Nuestra Señora de la Sabiduría Acacias</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2020</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Formación e implementación Office365</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Implementación del sistema Office365 en el plan
                                                     A3 para la institución educativa con dominio .edu.co.
                                                     En este proyecto se realizó la configuración del sistema en
                                                     Microsoft Azure, al igual que el proceso de creación de
@@ -765,7 +768,7 @@
                                                     manejo e implementación de la suite Microsoft Teams, y capacitación
                                                     a los docentes de la institución donde se abordaron
                                                     diferentes herramientas y novedades de la suite Office365.</p>
-                                                <p><spam class="portfolio__projects--caption">Nota:</spam> Proyecto desarrollado durante la pandemia del COVID19
+                                                <p><span class="portfolio__projects--caption">Nota:</span> Proyecto desarrollado durante la pandemia del COVID19
                                                     por medio de formación virtual.
                                                 </p>
                                             </div>
@@ -809,13 +812,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://sersuap.com" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://sersuap.com" target="_blank"
                                                         aria-label="Abrir el sitio web de Sergio Suarez Palacios en una nueva ventana">https://sersuap.com</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Sergio Suarez Palacios - Sersuap</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2018</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Sitio web personal desarrollado para el ingeniero
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Sergio Suarez Palacios - Sersuap</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2018</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Sitio web personal desarrollado para el ingeniero
                                                     Sergio Suárez Palacios, que destaca su
                                                     información personal, formación académica, y los servicios que
                                                     ofrece, además de un formulario de contacto para
@@ -869,13 +872,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://orientac.com" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://orientac.com" target="_blank"
                                                         aria-label="Abrir el sitio web de Provintec en una nueva ventana">https://orientac.com</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Orientac</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2020</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Sitio web desarrollado para Orientac, donde se
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Orientac</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2020</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Sitio web desarrollado para Orientac, donde se
                                                     renovó su espacio en la red, originalmente
                                                     diseñado como un sitio web estático en HTML. Se mejoró el diseño por
                                                     medio de la implementación de WordPress, integrando
@@ -924,13 +927,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://provintec.com.co" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://provintec.com.co" target="_blank"
                                                         aria-label="Abrir el sitio web de Provintec en una nueva ventana">https://provintec.com.co</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Provintec</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2017</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Moodle</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Este proyecto implicó la creación de un sitio web
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Provintec</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2017</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Moodle</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Este proyecto implicó la creación de un sitio web
                                                     en Moodle, específicamente diseñado para
                                                     satisfacer las necesidades de formación empresarial. Se implementó y
                                                     personalizó el tema Elementary, ajustando
@@ -982,13 +985,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://mesalud.com.co" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://mesalud.com.co" target="_blank"
                                                         aria-label="Abrir el sitio web de Mesalud en una nueva ventana">https://mesalud.com.co</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Mesalud</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2017</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño de Landing page con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Landing page diseñada para Mesalud IPS,
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Mesalud</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2017</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño de Landing page con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Landing page diseñada para Mesalud IPS,
                                                     destacando sus servicios, convenios y trayectoria como
                                                     institución prestadora de salud. La página incluye un formulario de
                                                     contacto que envía los mensajes directamente al
@@ -1043,13 +1046,13 @@
                                         <div class="row g-0">
                                             <!-- Columna izquierda con el texto -->
                                             <div class="col-lg-6">
-                                                <p><spam class="portfolio__projects--caption">URL:</spam> <a href="https://ci-pmg.com.co/" target="_blank"
+                                                <p><span class="portfolio__projects--caption">URL:</span> <a href="https://ci-pmg.com.co/" target="_blank"
                                                         aria-label="Abrir el sitio web de la Promotora Minera Global en una nueva ventana">https://ci-pmg.com.co/</a>
                                                 </p>
-                                                <p><spam class="portfolio__projects--caption">Cliente: </spam> Promotora Minera Global</p>
-                                                <p><spam class="portfolio__projects--caption">Fecha: </spam> 2017</p>
-                                                <p><spam class="portfolio__projects--caption">Servicio:</spam> Diseño web con Wordpress</p>
-                                                <p><spam class="portfolio__projects--caption">Descripción: </spam>Se diseñó una landing page en WordPress que
+                                                <p><span class="portfolio__projects--caption">Cliente: </span> Promotora Minera Global</p>
+                                                <p><span class="portfolio__projects--caption">Fecha: </span> 2017</p>
+                                                <p><span class="portfolio__projects--caption">Servicio:</span> Diseño web con Wordpress</p>
+                                                <p><span class="portfolio__projects--caption">Descripción: </span>Se diseñó una landing page en WordPress que
                                                     incluye un banner destacado, información clave de
                                                     la empresa, y una clara presentación de la misión y visión
                                                     corporativa. Además, se integró una gráfica en tiempo
@@ -1255,7 +1258,7 @@
                                 <p class="contact__card--text">Para solicitudes detalladas o documentación formal,
                                     escríbame a <strong>hola@ingegus.dev</strong></p>
                                 <a href="mailto:hola@ingegus.dev?subject=Consulta%20de%20servicios%20Freelance"
-                                    target="_blank" class="btn btn-primary">Escríbame</a>
+                                    target="_blank" class="btn btn-primary" aria-label="Escríbame por correo electrónico">Escríbame</a>
                             </div>
                         </div>
                     </div>
@@ -1267,7 +1270,7 @@
                                 <p class="contact__card--text">Si prefiere una comunicación rápida y directa, envíeme un
                                     mensaje a WhatsApp al <strong>+57 3212592574</strong></p>
                                 <a href="https://api.whatsapp.com/send/?phone=573212592574&text=hola%20encontr%C3%A9%20su%20sitio%20web%20y%20deseo%20hacerle%20una%20pregunta&type=phone_number&app_absent=0"
-                                    target="_blank" class="btn btn-primary">Escríbame</a>
+                                    target="_blank" class="btn btn-primary" aria-label="Escríbame por WhatsApp">Escríbame</a>
                             </div>
                         </div>
                     </div>
@@ -1276,7 +1279,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
             <div class=" row">
                 <div class="col-lg-5 footer__about">
@@ -1293,6 +1296,7 @@
                                     d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z">
                                 </path>
                             </svg>
+                            
                         </a>
                         <a href="https://github.com/ingegus/" target="_blank" aria-label="Ir a perfil en Github">
                             <svg class="footer__social--icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -1300,6 +1304,7 @@
                                     d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
                                 </path>
                             </svg>
+                           
                         </a>
                         <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000163755" target="_blank"
                             aria-label="Ir a perfil en CvLAC (Currículum Vitae para Latinoamérica y el Caribe)">
@@ -1335,7 +1340,7 @@
                     <nav aria-label="Footer navigation">
                         <ul>
                             <li><a href="#about-me">Acerca de</a></li>
-                            <li><a href="#services">    s</a></li>
+                            <li><a href="#services">Servicios</a></li>
                             <li><a href="#blog">Blog</a></li>
                             <li><a href="#contact">Contacto</a></li>
                         </ul>

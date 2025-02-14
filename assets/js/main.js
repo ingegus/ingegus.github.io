@@ -15,7 +15,7 @@ $(document).ready(function () {
                     <img src="${thumbnail}" class="blog__card--img" alt="Imagen del artículo ${index + 1}">
                     <div class="blog__card--body">
                         <h4 class="blog__card--title">${item.title}</h4>
-                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-bd-primary mt-auto">Leer más</a>
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-bd-primary mt-auto" aria-label="Leer el artículo llamado '${item.title}'">Leer más</a>
                     </div>
                 </div>
             </div>`;
