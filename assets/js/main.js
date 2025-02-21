@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
     /*---- Feed RSS ----*/
     const mediumUrl = 'https://ingegus.medium.com/';
     const numPostsToShow = 6;
@@ -6,16 +6,18 @@ $(document).ready(function () {
 
     // Crear tarjetas de feed RSS
     function createCard(item, index) {
-        const firstImage = $(item.content).find('img').first().attr('src');
-        const thumbnail = firstImage || 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Medium_Logo.webp';
+        const parser = new DOMParser();
+        const contentDoc = parser.parseFromString(item.content, 'text/html');
+        const firstImage = contentDoc.querySelector('img')?.src || 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Medium_Logo.webp';
 
         return `
             <div class="col-md-4 mb-4">
                 <div class="blog__card h-100">
-                    <img src="${thumbnail}" class="blog__card--img" alt="Imagen del artículo ${index + 1}">
+                    <img src="${firstImage}" class="blog__card--img" alt="Imagen del artículo ${index + 1}">
                     <div class="blog__card--body">
                         <h4 class="blog__card--title">${item.title}</h4>
-                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-bd-primary mt-auto" aria-label="Leer el artículo llamado '${item.title}'">Leer más</a>
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-bd-primary mt-auto" 
+                           aria-label="Leer el artículo llamado '${item.title}'">Leer más</a>
                     </div>
                 </div>
             </div>`;
@@ -38,15 +40,16 @@ $(document).ready(function () {
         indicatorsHtml += '</div>';
         return indicatorsHtml;
     }
-    
 
     // Cargar y mostrar tarjetas RSS
     function loadRssCards() {
-        $.getJSON(feedUrl)
-            .done(function (data) {
+        fetch(feedUrl)
+            .then(response => response.json())
+            .then(data => {
                 if (data.status === 'ok') {
                     const items = data.items.slice(0, numPostsToShow);
-                    const rssCardsContainer = $('#rssCards');
+                    const rssCardsContainer = document.getElementById('rssCards');
+                    const carouselIndicators = document.getElementById('carouselIndicators');
                     let html = '';
                     for (let i = 0; i < items.length; i += 3) {
                         html += `<div class="carousel-item ${i === 0 ? 'active' : ''}" role="tabpanel" id="slide-${i + 1}">
@@ -56,62 +59,67 @@ $(document).ready(function () {
                         }
                         html += '</div></div>';
                     }
-                    rssCardsContainer.html(html);
-                    $('#carouselIndicators').html(createIndicators(Math.ceil(items.length / 3)));
-                    if (items.length <= 3) $('.carousel-control-prev, .carousel-control-next').hide();
+                    rssCardsContainer.innerHTML = html;
+                    carouselIndicators.innerHTML = createIndicators(Math.ceil(items.length / 3));
+
+                    if (items.length <= 3) {
+                        document.querySelector('.carousel-control-prev').style.display = 'none';
+                        document.querySelector('.carousel-control-next').style.display = 'none';
+                    }
                 }
             })
-            .fail(function () {
-                console.error("Error al cargar el feed RSS.");
-            });
+            .catch(error => console.error("Error al cargar el feed RSS:", error));
     }
 
     loadRssCards();
 
     /*--- Filtro de la sección portafolio ---*/
-    $(".filter-b").click(function () {
-        const value = $(this).attr('data-filter');
-        $('.filter').toggle(value === 'todo').filter(`.${value}`).show('9000');
-        $(".filter-b").removeClass("active");
-        $(this).addClass("active");
+    document.querySelectorAll(".filter-b").forEach(button => {
+        button.addEventListener("click", function () {
+            const value = this.getAttribute("data-filter");
+            document.querySelectorAll(".filter").forEach(item => {
+                if (value === "todo" || item.classList.contains(value)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            document.querySelectorAll(".filter-b").forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
     });
 
     /*--- Botón ir hacia arriba ---*/
-    $('.go-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 300);
-    });
+    const goToTopBtn = document.querySelector('.go-to-top');
+    if (goToTopBtn) {
+        goToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 
-    $(window).scroll(function () {
-        $('.go-to-top').toggle($(this).scrollTop() > 600);
-    });
+        window.addEventListener("scroll", function () {
+            goToTopBtn.style.display = window.scrollY > 600 ? "block" : "none";
+        });
+    }
 
     /*--- Año actual ---*/
-    $('#year').text(new Date().getFullYear());
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 
-    /*--- Activar clase en menú ---*/
-    function activateSectionOnScroll() {
-            var scrollPosition = $(window).scrollTop();
-    
-            $('.section').each(function () {
-                var sectionOffset = $(this).offset().top;
-                var sectionHeight = $(this).outerHeight();
-                var sectionId = $(this).attr('id');
-                var $link = $('a[href="#' + sectionId + '"]')
-            });
-        }
-               
-        // Al hacer clic en un enlace, activa la sección correspondiente y la clase
-        $('.nav-link').on('click', function (e) {
+    /*--- Activar clase en menú al hacer scroll ---*/
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-    
-            var target = $(this).attr('href');
-            var offset = $(target).offset().top;
-    
-            $('html, body').animate({ scrollTop: offset }, 500, function () {
-                $('.nav-link').removeClass('nav-link--active');
-                $(e.target).addClass('nav-link--active');
-                
-                
-            });
-        });          
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-link--active'));
+                this.classList.add('nav-link--active');
+            }
+        });
+    });
+
 });

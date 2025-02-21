@@ -1043,7 +1043,8 @@ a:focus {
     display: none;
   }
 
-  .footer__copyright {
+  .footer__copyright,
+  .footer__copyright--polices {
     text-align: center;
   }
 }
@@ -1079,7 +1080,8 @@ a:focus {
     display: none;
   }
 
-  .footer__copyright {
+  .footer__copyright,
+  .footer__copyright--polices {
     text-align: center;
   }
 
@@ -1090,8 +1092,6 @@ a:focus {
   .nav-item{
     text-align: center;
   }
-
-  
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1137,10 +1137,11 @@ a:focus {
     display: none;
   }
 
-  .footer__copyright {
+  .footer__copyright,
+  .footer__copyright--polices {
     text-align: center;
   }
-
+  
   iframe{
     width: auto;
   }
