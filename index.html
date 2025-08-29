@@ -331,10 +331,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/quo.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Quo Soluciones Legales y Financieras SAS" role="button"
-                            onclick="document.getElementById('quo-dialog').showModal();" loading="lazy"
+                                     data-open-modal="quo-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto: Quo Soluciones Legales y Financieras SAS">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('quo-dialog').showModal();"
+                            data-open-modal="quo-dialog"
                             aria-label="Ver detalles del proyecto: Quo Soluciones Legales y Financieras SAS">
                             Ver detalles
                         </button>
@@ -347,7 +347,7 @@
                                 <h4 class="modal__title" id="quo-title">Quo Soluciones Legales y Financieras SAS
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('quo-dialog')">&times;</button>
+                                   data-close-modal="quo-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="quo-desc" role="region"
                                 aria-label="Descripción del proyecto Quo Soluciones Legales y Financieras SAS"
@@ -385,7 +385,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('quo-dialog').close();">Cerrar</button>
+                                    data-close-modal="quo-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -1359,7 +1359,7 @@
         </div>
     </footer>
     <!--Scripts-->
-    <script src="assets/js/main.js" nonce="nonce-random123"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

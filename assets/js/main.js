@@ -4,6 +4,7 @@ function openModal(id) {
   const dialog = document.getElementById(id);
   lastFocused[id] = document.activeElement;
   dialog.showModal();
+
   dialog.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeModal(id);
@@ -18,6 +19,24 @@ function closeModal(id) {
     lastFocused[id].focus();
   }
 }
+
+// Enganchar dinámicamente a botones e imágenes
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-open-modal]").forEach(el => {
+    el.addEventListener("click", () => {
+      const id = el.getAttribute("data-open-modal");
+      openModal(id);
+    });
+  });
+
+  document.querySelectorAll("[data-close-modal]").forEach(el => {
+    el.addEventListener("click", () => {
+      const id = el.getAttribute("data-close-modal");
+      closeModal(id);
+    });
+  });
+});
+
 
 /* slide OLPH */
 let slideIndex = 1;
