@@ -108,10 +108,7 @@
                     y
                     Genially, así como en la planificación y desarrollo de procesos de formación en entornos virtuales y
                     presenciales.</p>
-                <p>Para más información sobre mi experiencia profesional, <strong><a href="/assets/docs/HV_IngeGus.pdf"
-                            download="Curriculum_Gustavo_Rodriguez.pdf" type="application/pdf"
-                            aria-label="Descargue mi Currículum Vitae en formato PDF">descargue mi Currículum
-                            Vitae</a></strong> o visite mis redes sociales.</p>
+                <p>Para más información sobre mi experiencia profesional visite mis redes sociales.</p>
             </div>
             <div class="about-me__social">
                 <a href="https://www.linkedin.com/in/ingegus/" target="_blank" rel="noopener noreferrer"
@@ -396,10 +393,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/innova.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Innova educación y formación laboral" role="button"
-                            onclick="document.getElementById('innova-dialog').showModal();" loading="lazy"
+                            data-open-modal="innova-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Innova educación y formación laboral">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('innova-dialog').showModal();"
+                            data-open-modal="innova-dialog"
                             aria-label="Ver detalles del proyecto Innova educación y formación laboral">
                             Ver detalles
                         </button>
@@ -412,7 +409,7 @@
                                 <h4 class="modal__title" id="innova-title">Innova educación y formación laboral
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('innova-dialog')">&times;</button>
+                                    data-close-modal="innova-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="innova-desc" role="region" tabindex="0"
                                 aria-label="Descripción del proyecto Innova educación y formación laboral">
@@ -448,7 +445,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('innova-dialog').close();">Cerrar</button>
+                                    data-close-modal="innova-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -459,10 +456,11 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/cles.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Corporacion Latinoamericana de Estudios Superiores"
-                            role="button" onclick="document.getElementById('cles-dialog').showModal();" loading="lazy"
+                            role="button"  data-open-modal="cles-dialog" 
+                            loading="lazy"
                             aria-label="Ver detalles del proyecto Corporacion Latinoamericana de Estudios Superiores">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('cles-dialog').showModal();"
+                            data-open-modal="cles-dialog"
                             aria-label="Ver detalles del proyecto Corporacion Latinoamericana de Estudios Superiores">
                             Ver detalles
                         </button>
@@ -476,7 +474,7 @@
                                     Superiores
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('cles-dialog')">&times;</button>
+                                    data-close-modal="cles-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="cles-desc" tabindex="0" role="dialog"
                                 aria-label="Descripción del proyecto Corporacion Latinoamericana de Estudios Superiores">
@@ -524,7 +522,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('cles-dialog').close();">Cerrar</button>
+                                    data-close-modal="cles-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -535,11 +533,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/fadaGuaviare.png" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Fundación Arca de Amor Guaviare" role="button"
-                            onclick="document.getElementById('fada-dialog').showModal();" loading="lazy"
+                            data-open-modal="fada-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Fundación Arca de Amor Guaviare">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('fada-dialog').showModal();"
-                            aria-label="Ver detalles del proyecto Fundación Arca de Amor Guaviare">
+                            data-open-modal="fada-dialog" aria-label="Ver detalles del proyecto Fundación Arca de Amor Guaviare">
                             Ver detalles
                         </button>
                     </div>
@@ -612,7 +609,7 @@
                                 <h4 class="modal__title" id="olph-title">Nuestra Señora del Perpetuo Socorro
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('olph-dialog')">&times;</button>
+                                    data-close-modal="olph-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="olph-desc" role="region"
                                 aria-label="Descripción del proyecto Nuestra Señora del Perpetuo Socorro" tabindex="0">
@@ -680,13 +677,18 @@
                                             <div class="text">Personalización login de Moodle</div>
                                         </div>
 
-                                        <button class="prev" data-slider="slider__olph" onclick="plusSlides(-1)"
+                                        <!--<button class="prev" data-slider="slider__olph" onclick="plusSlides(-1)"
                                             aria-label="Slide anterior">❮</button>
                                         <button class="next" data-slider="slider__olph" onclick="plusSlides(1)"
-                                            aria-label="Slide siguiente">❯</button>
+                                            aria-label="Slide siguiente">❯</button>-->
+                                            <button class="prev" data-slider="slider__olph" data-action="prev"
+        aria-label="Slide anterior">❮</button>
+<button class="next" data-slider="slider__olph" data-action="next"
+        aria-label="Slide siguiente">❯</button>
 
                                     </div>
                                     <br>
+                                    <!--
                                     <div class="modal__body--dots">
                                         <button class="dot" data-slider="slider__olph" onclick="currentSlide(1)"
                                             aria-label="Ir al slide 1"></button>
@@ -699,11 +701,25 @@
                                         <button class="dot" data-slider="slider__olph" onclick="currentSlide(5)"
                                             aria-label="Ir al slide 3"></button>
                                     </div>
+                                -->
+
+                                <div class="modal__body--dots">
+  <button class="dot" data-slider="slider__olph" data-slide="1"
+          aria-label="Ir al slide 1"></button>
+  <button class="dot" data-slider="slider__olph" data-slide="2"
+          aria-label="Ir al slide 2"></button>
+  <button class="dot" data-slider="slider__olph" data-slide="3"
+          aria-label="Ir al slide 3"></button>
+  <button class="dot" data-slider="slider__olph" data-slide="4"
+          aria-label="Ir al slide 4"></button>
+  <button class="dot" data-slider="slider__olph" data-slide="5"
+          aria-label="Ir al slide 5"></button>
+</div>
                                 </div>
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('olph-dialog').close();">Cerrar</button>
+                                    data-close-modal="olph-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -714,11 +730,11 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/colsabi.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Colegio Nuestra Señora de la Sabiduría Acacias"
-                            role="button" onclick="document.getElementById('colsabi-dialog').showModal();"
+                            role="button" data-open-modal="colsabi-dialog"
                             loading="lazy"
                             aria-label="Ver detalles del proyecto Colegio Nuestra Señora de la Sabiduría Acacias">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('colsabi-dialog').showModal();"
+                            data-open-modal="colsabi-dialog"
                             aria-label="Ver detalles del proyecto Colegio Nuestra Señora de la Sabiduría Acacias">
                             Ver detalles
                         </button>
@@ -732,7 +748,7 @@
                                     Acacias
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('colsabi-dialog')">&times;</button>
+                                    data-close-modal="colsabi-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="colsabi-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Colegio Nuestra Señora de la Sabiduría Acacias">
@@ -755,7 +771,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('colsabi-dialog').close();">Cerrar</button>
+                                    data-close-modal="colsabi-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -766,10 +782,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/sersuap.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Sergio Suarez Palacios" role="button"
-                            onclick="document.getElementById('sergio-dialog').showModal();" loading="lazy"
+                            data-open-modal="sergio-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Sergio Suarez Palacios">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('sergio-dialog').showModal();"
+                            data-open-modal="sergio-dialog"
                             aria-label="Ver detalles del proyecto Sergio Suarez Palacios">
                             Ver detalles
                         </button>
@@ -782,7 +798,7 @@
                                 <h4 class="modal__title" id="sergio-title">Sergio Suarez Palacios
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('sergio-dialog')">&times;</button>
+                                    data-close-modal="sergio-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="sergio-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Sergio Suarez Palacios">
@@ -814,7 +830,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('sergio-dialog').close();">Cerrar</button>
+                                    data-close-modal="sergio-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -825,10 +841,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/orientac.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Orientac" role="button"
-                            onclick="document.getElementById('orientac-dialog').showModal();" loading="lazy"
+                            data-open-modal="orientac-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Orientac">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('orientac-dialog').showModal();"
+                            data-open-modal="orientac-dialog"
                             aria-label="Ver detalles del proyecto Nuestra Señora del Perpetuo Socorro">
                             Ver detalles
                         </button>
@@ -841,7 +857,7 @@
                                 <h4 class="modal__title" id="orientac-title">Orientac
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('orientac-dialog')">&times;</button>
+                                    data-close-modal="orientac-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="orientac-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Nuestra Señora del Perpetuo Socorro">
@@ -866,7 +882,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('orientac-dialog').close();">Cerrar</button>
+                                    data-close-modal="orientac-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -877,10 +893,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/provintec.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Provintec" role="button"
-                            onclick="document.getElementById('provintec-dialog').showModal();" loading="lazy"
+                            data-open-modal="provintec-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Provintec">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('provintec-dialog').showModal();"
+                            data-open-modal="provintec-dialog"
                             aria-label="Ver detalles del proyecto Provintec">
                             Ver detalles
                         </button>
@@ -893,7 +909,7 @@
                                 <h4 class="modal__title" id="provintec-title">Provintec
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('provintec-dialog')">&times;</button>
+                                    data-close-modal="provintec-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="provintec-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Provintec">
@@ -922,7 +938,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('provintec-dialog').close();">Cerrar</button>
+                                    data-close-modal="provintec-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -933,10 +949,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/mesalud.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Mesalud" role="button"
-                            onclick="document.getElementById('mesalud-dialog').showModal();" loading="lazy"
+                            data-open-modal="mesalud-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Mesalud">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('mesalud-dialog').showModal();"
+                            data-open-modal="mesalud-dialog"
                             aria-label="Ver detalles del proyecto Mesalud">
                             Ver detalles
                         </button>
@@ -949,7 +965,7 @@
                                 <h4 class="modal__title" id="mesalud-title">Mesalud
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('mesalud-dialog')">&times;</button>
+                                    data-close-modal="mesalud-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="mesalud-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Mesalud">
@@ -975,7 +991,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('mesalud-dialog').close();">Cerrar</button>
+                                    data-close-modal="mesalud-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -986,10 +1002,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/pmg.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Promotora Minera Global" role="button"
-                            onclick="document.getElementById('pmg-dialog').showModal();" loading="lazy"
+                            data-open-modal="pmg-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Promotora Minera Global">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('pmg-dialog').showModal();"
+                            data-open-modal="pmg-dialog"
                             aria-label="Ver detalles del proyecto Promotora Minera Global">
                             Ver detalles
                         </button>
@@ -1002,7 +1018,7 @@
                                 <h4 class="modal__title" id="pmg-title">Promotora Minera Global
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('pmg-dialog')">&times;</button>
+                                    data-close-modal="pmg-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="pmg-desc" role="dialog" tabindex="0"
                                 aria-label="Descripción del proyecto Promotora Minera Global">
@@ -1027,7 +1043,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('pmg-dialog').close();">Cerrar</button>
+                                    data-close-modal="pmg-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* slide OLPH */
+/* slide OLPH 
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -73,9 +73,67 @@ document.addEventListener('keydown', function(e) {
   } else if (e.key === 'ArrowRight') {
     plusSlides(1);
   }
+});*/
+
+/* slide OLPH */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  // Ocultar todos los slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Quitar clase active de todos los dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  // Mostrar slide actual
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+}
+
+// Eventos: navegación prev/next
+document.querySelectorAll("[data-action='prev']").forEach(btn => {
+  btn.addEventListener("click", () => plusSlides(-1));
+});
+
+document.querySelectorAll("[data-action='next']").forEach(btn => {
+  btn.addEventListener("click", () => plusSlides(1));
+});
+
+// Eventos: dots
+document.querySelectorAll("[data-slide]").forEach(dot => {
+  dot.addEventListener("click", () => {
+    const n = parseInt(dot.getAttribute("data-slide"), 10);
+    currentSlide(n);
+  });
+});
+
+// Navegación con teclado
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") plusSlides(-1);
+  if (e.key === "ArrowRight") plusSlides(1);
 });
 
 
+/* testimonio */
 (function () {
   let index = 0;
   const slides = document.querySelectorAll('.testimonials__carousel--item');
