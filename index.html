@@ -548,7 +548,7 @@
                                 <h4 class="modal__title" id="fada-title">Fundación Arca de Amor Guaviare
                                 </h4>
                                 <button class="modal__close" aria-label="Cerrar ventana"
-                                    onclick="closeModal('fada-dialog')">&times;</button>
+                                    data-close-modal="fada-dialog">&times;</button>
                             </div>
                             <div class="modal__body" id="fada-desc" tabindex="0" role="region"
                                 aria-label="Descripción del proyecto Fundación Arca de Amor Guaviare">
@@ -582,7 +582,7 @@
                             </div>
                             <div class="modal__footer">
                                 <button class="modal__button"
-                                    onclick="document.getElementById('fada-dialog').close();">Cerrar</button>
+                                    data-close-modal="fada-dialog">Cerrar</button>
                             </div>
                         </div>
                     </dialog>
@@ -593,10 +593,10 @@
                     <div class="portfolio__projects--container">
                         <img src="/assets/img/olph.webp" class="portfolio__projects-image"
                             alt="Ver detalles del proyecto: Nuestra Señora del Perpetuo Socorro" role="button"
-                            onclick="document.getElementById('olph-dialog').showModal();" loading="lazy"
+                            data-open-modal="olph-dialog" loading="lazy"
                             aria-label="Ver detalles del proyecto Nuestra Señora del Perpetuo Socorro">
                         <button class="portfolio__projects-button"
-                            onclick="document.getElementById('olph-dialog').showModal();"
+                            data-open-modal="olph-dialog"
                             aria-label="Ver detalles del proyecto Nuestra Señora del Perpetuo Socorro">
                             Ver detalles
                         </button>
@@ -1305,7 +1305,7 @@
                     </a>
                 </p>
                 <!-- Botón de apertura -->
-                <button class="footer__policies--button" onclick="document.getElementById('modalPoliticas').showModal()"
+                <button class="footer__policies--button" data-open-modal="modalPoliticas"
                     aria-haspopup="dialog">
                     Políticas de Privacidad y Seguridad
                 </button>
