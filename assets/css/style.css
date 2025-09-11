@@ -995,14 +995,8 @@ button {
   text-align: center;
 }
 
-.contact__cards--social {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-}
 
-.contact__cards--mail-link {
+.contact__cards--card-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
@@ -1013,18 +1007,16 @@ button {
 }
 
 
-.contact__cards--mail-link:hover .contact__cards--mail-icon,
-.contact__cards--mail-link:focus .contact__cards--mail-icon {
-  /* ejemplo de cambio de color al hover/focus */
+.contact__cards--card-link:hover .contact__cards--card-icon,
+.contact__cards--card-link:focus .contact__cards--card-icon {
   filter: brightness(0) saturate(100%) invert(42%) sepia(44%) saturate(373%) hue-rotate(147deg) brightness(96%) contrast(94%);
 }
 
-.contact__cards--mail-iconn {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  /* para que no se reduzca si el contenedor se achica */
+a.contact__cards--card-link:focus{
+  border: 2px var(--dark-blue) dotted;
+    border-radius: 4px;
 }
+
 
 /* Footer */
 .footer {
