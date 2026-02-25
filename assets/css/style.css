@@ -492,7 +492,7 @@ button {
 .formation__title,
 .skills__title,
 .blog__title,
-.portfolio-title,
+.portfolio__title,
 .testimonials__title,
 .services__title,
 .contact__title {
@@ -1552,7 +1552,7 @@ a.contact__cards--card-link:focus{
   .formation__title,
   .skills__title,
   .blog__title,
-  .portfolio-title,
+  .portfolio__title,
   .testimonials__title,
   .services__title,
   .contact__title {
