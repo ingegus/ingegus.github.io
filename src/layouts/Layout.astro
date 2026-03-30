@@ -1,0 +1,74 @@
+---
+const { lang = "es" } = Astro.props;
+import "../styles/global.css";
+
+import es from "../i18n/es.js";
+import en from "../i18n/en.js";
+
+const t = lang === "es" ? es : en;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <title class="title">{t.headers.title}</title>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+    <meta name="description" content={t.headers.description} />
+    <meta name="keywords" content={t.headers.keywords} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <meta name="author" content="Gustavo Adolfo Rodríguez Alonso - Inge Gus" />
+    <meta name="pagemode" content="bfcache" />
+    <!-- Open Graph -->
+    <meta property="og:title" content={t.headers.ogTitle} />
+    <meta property="og:description" content={t.headers.ogDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ingegus.dev" />
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="6eWNMTOYWN1n5SwVej4l0tAm8DT7RMI56aqcxKikvoc"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gustavo Adolfo Rodríguez Alonso",
+        "url": "https://ingegus.dev",
+        "sameAs": [
+          "https://www.youtube.com/@ingegus-dev",
+          "https://ingegus.medium.com",
+          "https://www.linkedin.com/in/ingegus"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-[#FFFFFE] text-[#0E3B43]">
+    <!-- Skip to content link -->
+    <a href="#main-content" class="absolute left-[-999px] top-auto w-[1px] h-[1px] overflow-hidden focus:left-0 focus:w-full focus:h-auto focus:bg-indigo-700 focus:text-white focus:text-center focus:p-2 z-[999]">{t.skip.content}</a>
+    <main id="main-content">
+      <slot />
+    </main>
+    <!-- Button to the top -->
+    <button id="go-top" aria-label={t.cta.goTop} class="hidden fixed bottom-4 right-4 w-10 h-10 bg-[#0E3B43] text-white rounded-full flex items-center justify-center z-50 focus:outline-dotted focus:outline-2 focus:outline-indigo-500">
+      <img src="/assets/icons/go-top.svg" alt="" class="w-4 h-4" />
+    </button>
+    <!-- Script -->
+    <script>
+      const btn = document.getElementById("go-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.remove("hidden");
+        } else {
+          btn.classList.add("hidden");
+        }
+      });
+
+      btn?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

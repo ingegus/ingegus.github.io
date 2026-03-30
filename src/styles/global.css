@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #232946;
+  --color-secondary: #5f6c7b;
+  --color-accent: #0E3B43;
+  --color-link: #1a5480;
+  --color-link-hover: #257DB3;
+  --color-background: #fffffe;
+  --color-button-bg: #007bff1a;
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/Atkinson-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/Atkinson-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Atkinson', system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-accent);
+  min-height: 100vh;
+}
+
+/* link styles */
+
+a:not(.btn) {
+  color: var(--color-link);
+}
+
+a:not(.btn):hover {
+  color: var(--color-link-hover);
+}
+
+a:not(.btn):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-link);
+  border-radius: 4px;
+}
+
+/* Menu Toggle Styles */
+
+#menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* nav bar styles */
+
+@layer components {
+  .nav-link {
+    @apply relative font-medium;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .nav-link.active {
+  color: var(--color-primary);
+}
+}
+/* Button Styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-bold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white shadow-lg shadow-primary/20;
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary/20 text-primary;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary/5;
+  }
+   .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  .btn:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
