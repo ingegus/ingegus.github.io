@@ -52,6 +52,14 @@ a:not(.btn):focus-visible {
   border-radius: 4px;
 }
 
+/* Skip link styles */
+.skip-link {
+  color: inherit;
+}
+
+.skip-link:focus-visible {
+  color: white;
+}
 /* Menu Toggle Styles */
 
 #menu-toggle.open span:nth-child(1) {

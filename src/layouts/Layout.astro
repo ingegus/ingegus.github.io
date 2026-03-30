@@ -46,8 +46,10 @@ const t = lang === "es" ? es : en;
   </head>
   <body class="bg-[#FFFFFE] text-[#0E3B43]">
     <!-- Skip to content link -->
-    <a href="#main-content" class="absolute left-[-999px] top-auto w-[1px] h-[1px] overflow-hidden focus:left-0 focus:w-full focus:h-auto focus:bg-indigo-700 focus:text-white focus:text-center focus:p-2 z-[999]">{t.skip.content}</a>
-    <main id="main-content">
+    <a 
+  href="#main-content" 
+      class="sr-only skip-link focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:w-full focus:bg-primary focus:text-white focus:text-center focus:p-2 z-50">{t.skip.content}</a>
+    <main>
       <slot />
     </main>
     <!-- Button to the top -->
