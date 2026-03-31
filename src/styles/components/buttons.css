@@ -1,0 +1,29 @@
+@layer components {
+  .btn {
+  @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-bold transition-all duration-200 no-underline;
+  color: inherit;
+}
+
+  .btn.btn-primary {
+    @apply bg-primary text-white shadow-lg shadow-primary/20;
+  }
+
+  .btn.btn-primary:hover {
+    @apply -translate-y-1;
+  }
+
+  .btn.btn-secondary {
+    @apply border-2 border-primary/20 text-primary;
+  }
+
+  .btn.btn-secondary:hover {
+    @apply bg-primary/5;
+  }
+   .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  .btn:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
