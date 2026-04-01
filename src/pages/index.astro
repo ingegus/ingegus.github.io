@@ -2,8 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
 
 import '../styles/global.css';
+
+
 import es from '../i18n/es.js';
 
 const lang = 'es';
@@ -13,4 +16,5 @@ const t = es;
 <Layout lang={lang}>
   <Header />
   <Hero t={t} />
+  <Services t={t} />
 </Layout>

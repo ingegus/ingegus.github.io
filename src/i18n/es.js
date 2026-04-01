@@ -14,7 +14,7 @@ export default {
     contact: "Contacto",
     mobileMenuOpen: "Abrir menú de navegación",
     mobileMenuClose: "Cerrar menú de navegación",
-    aria:{
+    aria: {
       mainNavegation: "Navegación principal",
       mobileNavegation: "Navegación móvil",
       changeTheme: "Cambiar tema",
@@ -32,7 +32,7 @@ export default {
   skip: {
     content: "Saltar al contenido"
   },
-   hero: {
+  hero: {
     badge: "Especialista en Moodle y WordPress para e-learning",
     title: {
       part1: "Soluciones de",
@@ -52,6 +52,42 @@ export default {
       services: "Ver servicios"
     },
 
-    imageAlt:" Imagen de ejemplo de una plataforma e-learning personalizada diseñada por Inge Gus, mostrando un diseño moderno y funcional que destaca la experiencia en Moodle y WordPress."
+    imageAlt: " Imagen de ejemplo de una plataforma e-learning personalizada diseñada por Inge Gus, mostrando un diseño moderno y funcional que destaca la experiencia en Moodle y WordPress."
+  },
+  services: {
+    title: "Soluciones que generan resultados reales",
+    description: "Identifico los puntos críticos y los transformo en mejoras reales de rendimiento, experiencia y conversión.",
+    card1:{
+      title: "¿Problemas de rendimiento en Moodle?",
+      description: "Se optimiza el rendimiento y la seguridad de Moodle para reducir tiempos de carga y evitar fallos críticos.",
+      object:"✓ Plataforma rápida, segura y lista para escalar",
+      action:"Optimizar Moodle"
+    },
+    card2:{
+      title: "¿Baja interacción en los cursos digitales?",
+      description: "Se diseñan contenidos interactivos tipo SCORM que aumentan la retención y mejoran el aprendizaje.",
+      object:"✓ Más interacción y mayor finalización",
+      action: "Diseñar contenidos interactivos"
+    },
+    card3:{
+      title: "¿Necesita una web profesional para formación o empresa?",
+      description: "Se desarrollan sitios optimizados para posicionamiento, conversión y gestión eficiente.",
+      object:"✓ Presencia digital sólida y lista para crecer",
+      action: "Desarrollar web profesional"
+    },
+    aria:{
+      card1:{
+        label: "Optimizar rendimiento y seguridad en Moodle",
+        labeledby: "service1-title"
+      },
+      card2:{
+        label: "Aumentar interacción en cursos digitales",
+        labeledby: "service2-title"
+      },
+      card3:{
+        label: "Desarrollar una web profesional para formación o empresa",
+        labeledby: "service3-title"
+      }
+    }
   }
 };

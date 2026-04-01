@@ -52,5 +52,41 @@ export default {
       services: "View services"
     },
     imageAlt: "Example image of a custom e-learning platform designed by Inge Gus, showcasing a modern and functional design that highlights expertise in Moodle and WordPress."
+  },
+  services: {
+    title: "Solutions that deliver real results",
+    description: "I identify critical issues and turn them into tangible improvements in performance, user experience, and conversion rates.",
+    card1:{
+      title: "Performance issues in Moodle?",
+      description: "We optimize Moodle's performance and security to reduce load times and prevent critical failures.",
+      object:"✓ Fast, secure, and scalable platform",
+      action:"Optimize Moodle"
+    },
+    card2:{
+      title: "Low engagement in digital courses?",
+      description: "We design SCORM-compliant interactive content that increases retention and improves learning.",
+      object:" ✓ More interaction and higher completion rates",
+      action: "Design interactive content"
+    },
+    card3:{
+      title: "Need a professional website for training or your business?",
+      description: "We develop sites optimized for SEO, conversion, and efficient management.",
+      object:" ✓ A solid digital presence ready to grow",
+      action: "Develop a professional website"
+    },
+    aria:{
+      card1:{
+        label: "Optimize performance and security in Moodle",
+        labeledby: "service1-title"
+      },
+      card2:{
+        label: "Increase engagement in digital courses",
+        labeledby: "service2-title"
+      },
+      card3:{
+        label: "Develop a professional website for training or business",
+        labeledby: "service3-title"
+      }
+    }
   }
-};
+}

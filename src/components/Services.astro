@@ -1,0 +1,93 @@
+---
+const { t } = Astro.props;
+import PerformanceIcon from "../components/icons/PerformanceIcon.astro";
+import LowInteractionIcon from "../components/icons/LowInteractionIcon.astro";
+import WebsiteIcon from "../components/icons/WebsiteIcon.astro";
+import ArrowIcon from "../components/icons/ArrowIcon.astro";
+---
+
+<section class="py-24" id="servicios">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-primary">
+        {t.services.title}
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto">
+        {t.services.description}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card1.label} aria-labelledby={t.services.aria.card1.labelledby}>
+        <div
+          class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
+          <PerformanceIcon class="w-8 h-8 text-blue-700" />
+        </div>
+
+        <h3 class="text-xl font-bold">{t.services.card1.title}</h3>
+
+        <p class="mb-6">
+          {t.services.card1.description}
+        </p>
+
+        <p class="text-accent font-bold mb-8">
+          {t.services.card1.object}
+        </p>
+
+         <span class="inline-flex items-center text-link group-hover:text-link-hover transition-colors">
+          {t.services.card1.action}
+          <ArrowIcon class="w-4 h-4 " />
+        </span>
+      </a>
+
+      <!-- Card 2 -->
+       <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card2.label} aria-labelledby={t.services.aria.card2.labelledby}>
+        <div
+          class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+        >
+          <LowInteractionIcon class="w-8 h-8 text-purple-700" />
+        </div>
+
+        <h3 class="text-xl font-bold">
+          {t.services.card2.title}
+        </h3>
+
+        <p class="mb-6">
+          {t.services.card2.description}
+        </p>
+
+        <p class="text-accent font-bold mb-8">
+          {t.services.card2.object}
+        </p>
+
+        <span class="inline-flex items-center text-link group-hover:text-link-hover transition-colors">
+          {t.services.card2.action}
+          <ArrowIcon class="w-4 h-4 " />
+        </span>
+      </a>
+
+      <!-- Card 3 -->
+
+      <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card3.label} aria-labelledby={t.services.aria.card3.labelledby}>
+        <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <WebsiteIcon class="w-8 h-8 text-indigo-700" />
+        </div>
+        <h3 class="text-xl font-bold">
+          {t.services.card3.title}
+        </h3>
+        <p class="mb-6">
+          {t.services.card3.description}
+        </p>
+        <p class="text-accent font-bold mb-8">
+          {t.services.card3.object}
+        </p>
+        <span class="inline-flex items-center text-link group-hover:text-link-hover transition-colors">
+          {t.services.card3.action}
+          <ArrowIcon class="w-4 h-4 " />
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
