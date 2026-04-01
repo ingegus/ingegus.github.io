@@ -3,17 +3,33 @@
 /* Importa tus componentes */
 @import "./components/buttons.css";
 @import "./components/nav.css";
+@import "./components/cards.css";
 
 /* Define variables de color para el tema */
 @theme {
   --color-primary: #232946;
+  --color-primary-dark: #fff7f7;
+
   --color-secondary: #5f6c7b;
+  --color-secondary-dark: #f4f4f5;
+
   --color-accent: #0E3B43;
+  
   --color-link: #1a5480;
   --color-link-hover: #257DB3;
+
   --color-background: #fffffe;
   --color-button-bg: #007bff1a;
+
+  --color-surface: #ffffff;
+  --color-surface-dark: #1e293b;
+
+  --color-border: #e5e7eb;
+  --color-border-dark: #334155;
+
+  --radius-card: 1.5rem;
 }
+
 /* Define fuentes del sitio */
 @font-face {
   font-family: 'Atkinson';
@@ -30,19 +46,27 @@
 }
 
 @layer base {
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     font-family: 'Atkinson', system-ui, sans-serif;
     background-color: var(--color-background);
     min-height: 100vh;
     color: var(--color-accent);
+  }
+  /* Modo oscuro */
+  .dark body {
+    background-color: black;
+    color: var(--color-secondary-dark);
   }
 
   /* enlaces */
@@ -59,15 +83,22 @@ html:focus-within {
     box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-link);
     border-radius: 4px;
   }
+
   /* encabezados y párrafos */
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: var(--color-primary);
+    @apply mb-4
   }
 
   p {
-    
     line-height: 1.6;
+    @apply text-secondary;
   }
+
+  
 }
 
 
