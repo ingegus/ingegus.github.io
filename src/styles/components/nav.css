@@ -25,4 +25,7 @@
   .nav-link.active {
   color: var(--color-primary);
 }
+.menu-link {
+  @apply text-xl;
+}
 }
