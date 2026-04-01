@@ -13,7 +13,16 @@ export default {
     blog: "Blog",
     contact: "Contact",
     mobileMenuOpen: "Open navigation menu",
-    mobileMenuClose: "Close navigation menu"
+    mobileMenuClose: "Close navigation menu",
+    aria:{
+      mainNavegation: "Main navigation",
+      mobileNavegation: "Mobile navigation",
+      changeTheme: "Change theme",
+      lang: "Change language to English"
+    },
+    alt: {
+      logo: "Inge Gus logo, the letter G with a spider in the center, representing creativity and connection in web design and eLearning development"
+    }
   },
   cta: {
     talk: "Let's talk",
@@ -24,19 +33,24 @@ export default {
     content: "Skip to content"
   },
   hero: {
-    badge: "Moodle & WordPress Specialist",
+    badge: "Moodle & WordPress Specialist for e-learning",
     title: {
-      part1: "Custom",
-      highlight: "e-learning",
-      part2: "solutions that deliver real results"
+      part1: "E-learning",
+      highlight: "solutions",
+      part2: "with Moodle and WordPress"
     },
-    subtitle: "High-performance e-learning solutions. I design secure, accessible, and scalable learning environments tailored for your institution or business.",
+    subtitle: "I design and implement secure, scalable, results-focused e-learning platforms for businesses and institutions.",
     ctaPrimary: "View projects",
     ctaSecondary: "View services",
-    trust: "Experience in real-world educational platforms and production projects",
+    trust: "Experience implementing educational platforms in real-world settings",
     metric: {
       value: "+10",
       label: "years of e-learning experience"
-    }
+    },
+      aria: {
+      projects: "View projects",
+      services: "View services"
+    },
+    imageAlt: "Example image of a custom e-learning platform designed by Inge Gus, showcasing a modern and functional design that highlights expertise in Moodle and WordPress."
   }
 };

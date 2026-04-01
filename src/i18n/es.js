@@ -13,7 +13,16 @@ export default {
     blog: "Blog",
     contact: "Contacto",
     mobileMenuOpen: "Abrir menú de navegación",
-    mobileMenuClose: "Cerrar menú de navegación"
+    mobileMenuClose: "Cerrar menú de navegación",
+    aria:{
+      mainNavegation: "Navegación principal",
+      mobileNavegation: "Navegación móvil",
+      changeTheme: "Cambiar tema",
+      lang: "cambiar idioma a inglés"
+    },
+    alt: {
+      logo: "logo de Inge Gus, la letra G con una araña en el centro, representando la creatividad y la conexión en el diseño web y el desarrollo eLearning"
+    }
   },
   cta: {
     talk: "Hablemos",
@@ -24,19 +33,25 @@ export default {
     content: "Saltar al contenido"
   },
    hero: {
-    badge: "Freelance EdTech - Especialista en Moodle & WordPress",
+    badge: "Especialista en Moodle y WordPress para e-learning",
     title: {
-      part1: "Soluciones personalizadas de",
+      part1: "Soluciones de",
       highlight: "e-learning",
-      part2: "que generan resultados reales"
+      part2: "con Moodle y WordPress"
     },
-    subtitle: "Diseño e implemento plataformas e-learning personalizadas, seguras y escalables para instituciones y empresas que necesitan resultados reales",
+    subtitle: "Diseño e implemento plataformas e-learning seguras, escalables y enfocadas en resultados para empresas e instituciones.",
     ctaPrimary: "Ver proyectos",
     ctaSecondary: "Ver servicios",
-    trust: "Experiencia en plataformas educativas y proyectos reales en producción",
+    trust: "Experiencia implementando plataformas educativas en entornos reales",
     metric: {
       value: "+10 años ",
       label: "de experiencia en e-learning"
-    }
+    },
+    aria: {
+      projects: "Ver proyectos",
+      services: "Ver servicios"
+    },
+
+    imageAlt:" Imagen de ejemplo de una plataforma e-learning personalizada diseñada por Inge Gus, mostrando un diseño moderno y funcional que destaca la experiencia en Moodle y WordPress."
   }
 };
