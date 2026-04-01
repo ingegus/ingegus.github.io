@@ -2,39 +2,39 @@
 const { t } = Astro.props;
 ---
 
-<section class="mx-auto container px-6 py-12 lg:px-10 lg:py-24" >
+<section aria-labelledby="hero-title" class="mx-auto container px-6 py-12 lg:px-10 lg:py-24" >
   <div class="grid items-center gap-12 lg:grid-cols-2">
     
     <!-- Content -->
-    <div class="flex flex-col gap-8" id=" main-content"> 
+    <div class="flex flex-col gap-8" id="main-content"> 
       
       <div class="flex flex-col gap-4">
         <span class="w-fit rounded-full bg-primary/10 px-4 py-1 text-sm font-bold text-primary">
           {t.hero.badge}
         </span>
 
-        <h1 class="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-slate-100 lg:text-6xl">
+        <h1 id="hero-title" class="text-5xl lg:text-6xl font-black leading-tight tracking-tight text-primary">
           {t.hero.title.part1}
-          <span class="text-primary"> {t.hero.title.highlight} </span>
+          <span class="text-secondary"> {t.hero.title.highlight} </span>
           {t.hero.title.part2}
         </h1>
 
-        <p class="max-w-xl text-lg leading-relaxed text-secondary dark:text-slate-400">
+        <p class="max-w-xl text-lg leading-relaxed text-secondary">
           {t.hero.subtitle}
         </p>
       </div>
 
       <div class="flex flex-wrap gap-4">
-        <a href="/proyectos" class="btn btn-primary btn-lg">
+        <a href="/proyectos" class="btn btn-primary btn-lg" aria-label={t.hero.aria.projects}>
           {t.hero.ctaPrimary}
         </a>
 
-        <a href="/servicios" class="btn btn-secondary btn-lg">
+        <a href="#servicios" class="btn btn-secondary btn-lg" aria-label={t.hero.aria.services}>
           {t.hero.ctaSecondary}
         </a>
       </div>
 
-      <p class="text-sm text-secondary">
+      <p class="text-sm ">
         {t.hero.trust}
       </p>
     </div>
@@ -45,18 +45,18 @@ const { t } = Astro.props;
         <img 
           class="h-full w-full object-cover"
           src="/images/hero-mockup.jpg"
-          alt="Moodle and WordPress dashboard"
+          alt={t.hero.imageAlt}
         />
       </div>
 
       <div class="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-6 shadow-xl dark:bg-slate-800 md:block">
         <div class="flex items-center gap-4">
-          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600">
-            ↑
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+            <img src="/assets/icons/go-top.svg" alt="" aria-hidden="true" class="h-6 w-6" />
           </div>
           <div>
             <p class="text-2xl font-bold">{t.hero.metric.value}</p>
-            <p class="text-xs text-secondary">{t.hero.metric.label}</p>
+            <p class="text-xs ">{t.hero.metric.label}</p>
           </div>
         </div>
       </div>
