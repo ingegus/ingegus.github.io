@@ -1,0 +1,16 @@
+@layer components {
+  .card {
+    @apply p-6 rounded-xl border transition-all duration-300 shadow-sm hover:shadow-xl;
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .dark .card {
+    background-color: var(--color-surface-dark);
+    border-color: var(--color-border-dark);
+  }
+
+  .card-hover {
+    @apply hover:border-accent;
+  }
+}
