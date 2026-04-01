@@ -5,7 +5,7 @@ import es from "../i18n/es";
 import en from "../i18n/en";
 
 const lang = getLang(Astro.url.pathname);
-const t =  lang === 'es' ? es : en;
+const t = lang === "es" ? es : en;
 
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === routes[lang].home;
@@ -16,152 +16,214 @@ const isActive = (path) => {
   return currentPath.startsWith(path);
 };
 
-const linkClass = (path) => 
-  `nav-link ${isActive(path) ? 'active' : ''}`;
+const linkClass = (path) => `nav-link ${isActive(path) ? "active" : ""}`;
 
-const ariaCurrent = (path) =>
-  isActive(path) ? 'page' : undefined;  
-
+const ariaCurrent = (path) => (isActive(path) ? "page" : undefined);
 
 function switchLang(pathname) {
-  if (pathname.startsWith('/en')) {
-    return pathname.replace('/en', '') || '/';
+  if (pathname.startsWith("/en")) {
+    return pathname.replace("/en", "") || "/";
   } else {
-    return '/en' + pathname;
+    return "/en" + pathname;
   }
 }
 ---
 
-<header class="relative w-full border-b border-gray-200 bg-white">
-    <div class="mx-auto flex max-w-full items-center justify-between px-6 py-4 lg:px-10">
+<header class="w-full border-b border-primary/10 bg-background backdrop-blur z-30 sticky top-0">
+  <div
+    class="mx-auto flex max-w-full items-center justify-between px-6 py-4 lg:px-10"
+  >
     <!-- Logo -->
     <a href={routes[lang].home} class="flex items-center gap-2">
-      <img src="/logo.webp" alt="IngeGus" class="w-8 h-8" />
+      <img src="/logo.webp" alt={t.nav.alt.logo} class="w-8 h-8" />
       <span class="font-semibold text-lg">IngeGus</span>
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden md:flex items-center gap-8">
-      <a href={routes[lang].home} class={linkClass(routes[lang].home)} aria-current={ariaCurrent(routes[lang].home)}>
+    <nav
+      class="hidden md:flex items-center gap-8"
+      aria-label={t.nav.aria.mainNavegation}
+    >
+      <a
+        href={routes[lang].home}
+        class={linkClass(routes[lang].home)}
+        aria-current={ariaCurrent(routes[lang].home)}
+      >
         {t.nav.home}
       </a>
-      <a href={routes[lang].services} class={linkClass(routes[lang].services)} aria-current={ariaCurrent(routes[lang].services)}>
+      <a
+        href={routes[lang].services}
+        class={linkClass(routes[lang].services)}
+        aria-current={ariaCurrent(routes[lang].services)}
+      >
         {t.nav.services}
       </a>
-      <a href={routes[lang].projects} class={linkClass(routes[lang].projects)} aria-current={ariaCurrent(routes[lang].projects)}>
+      <a
+        href={routes[lang].projects}
+        class={linkClass(routes[lang].projects)}
+        aria-current={ariaCurrent(routes[lang].projects)}
+      >
         {t.nav.projects}
       </a>
-      <a href={routes[lang].blog} class={linkClass(routes[lang].blog)} aria-current={ariaCurrent(routes[lang].blog)}>
+      <a
+        href={routes[lang].blog}
+        class={linkClass(routes[lang].blog)}
+        aria-current={ariaCurrent(routes[lang].blog)}
+      >
         {t.nav.blog}
       </a>
-      <a href={routes[lang].contact} class={linkClass(routes[lang].contact)} aria-current={ariaCurrent(routes[lang].contact)}>
+      <a
+        href={routes[lang].contact}
+        class={linkClass(routes[lang].contact)}
+        aria-current={ariaCurrent(routes[lang].contact)}
+      >
         {t.nav.contact}
       </a>
     </nav>
 
     <!-- Desktop actions -->
     <div class="hidden md:flex items-center gap-4">
-      <a href={lang === "es" ? "/en" : "/"}>{t.cta.lang}</a>
-      <button id="theme-toggle">🌙</button>
       <a
-        href={routes[lang].contact}
-        class="btn btn-primary"
+        href={lang === "es" ? "/en" : "/"}
+        aria-label={t.nav.aria.lang}
+        title={t.nav.aria.lang}
       >
-        {t.cta.talk}
+        {t.cta.lang}
       </a>
-    </div>
-
-    <!-- Mobile button -->
- <button 
-  id="menu-toggle" 
-  aria-label={t.nav.mobileMenuOpen}
-  aria-expanded="false"
-  class="md:hidden fixed top-4 right-4 z-[60] flex flex-col justify-center items-center w-8 h-8 gap-1.5"
->
-  <span class="block w-6 h-0.5 bg-black transition-all duration-300"></span>
-  <span class="block w-6 h-0.5 bg-black transition-all duration-300"></span>
-  <span class="block w-6 h-0.5 bg-black transition-all duration-300"></span>
-</button>
-  </div>
-
-  <!-- Mobile menu -->
-  <div 
-  id="mobile-menu" 
-  class="md:hidden fixed inset-0 bg-white z-50 scale-0 origin-top-right transition-transform duration-500 ease-in-out"
->
-  <div class="h-full flex flex-col justify-center items-center gap-8 text-center">
-
-    <nav class="flex flex-col gap-6 text-xl">
-      <a href={routes[lang].home} class={`menu-link nav-link ${isHome ? 'active' : ''}`} aria-current={isHome ? 'page' : undefined}>
-        {t.nav.home}
-      </a>
-      <a href={routes[lang].services}  class={`menu-link ${linkClass(routes[lang].services)}`} aria-current={ariaCurrent(routes[lang].services)}>
-        {t.nav.services}
-      </a>
-      <a href={routes[lang].projects}  class={`menu-link ${linkClass(routes[lang].projects)}`} aria-current={ariaCurrent(routes[lang].projects)}>
-        {t.nav.projects}
-      </a>
-      <a href={routes[lang].blog}  class={`menu-link ${linkClass(routes[lang].blog)}`} aria-current={ariaCurrent(routes[lang].blog)}>
-        {t.nav.blog}
-      </a>
-      <a href={routes[lang].contact}  class={`menu-link ${linkClass(routes[lang].contact)}`} aria-current={ariaCurrent(routes[lang].contact)}>
-        {t.nav.contact}
-      </a>
-    </nav>
-
-    <div class="flex flex-col gap-4">
-      <a href={switchLang(Astro.url.pathname)}>{lang === "es" ? "EN" : "ES"}</a>
-
-      <button id="theme-toggle-mobile">🌙</button>
-
+      <button id="theme-toggle" aria-label={t.nav.aria.changeTheme}>🌙</button>
       <a href={routes[lang].contact} class="btn btn-primary">
         {t.cta.talk}
       </a>
     </div>
 
+    <!-- Mobile button -->
+    <button
+      id="menu-toggle"
+      aria-label={t.nav.mobileMenuOpen}
+      aria-expanded="false"
+      class="md:hidden fixed top-4 right-4 z-50 flex flex-col justify-center items-center w-8 h-8 gap-1.5 menu-toggle"
+    >
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300"
+      ></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300"
+      ></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300"
+      ></span>
+    </button>
   </div>
-</div>
-</div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed inset-0 bg-background z-40 scale-0 origin-top-right transition-transform duration-500 ease-in-out"
+  >
+    <div
+      class="h-full flex flex-col justify-center items-center gap-8 text-center"
+    >
+      <nav
+        class="flex flex-col gap-6 text-xl"
+        aria-label={t.nav.aria.mobileNavegation}
+      >
+        <a
+          href={routes[lang].home}
+          class={`menu-link nav-link ${isHome ? "active" : ""}`}
+          aria-current={isHome ? "page" : undefined}
+        >
+          {t.nav.home}
+        </a>
+        <a
+          href={routes[lang].services}
+          class={`${linkClass(routes[lang].services)} menu-link`}
+          aria-current={ariaCurrent(routes[lang].services)}
+        >
+          {t.nav.services}
+        </a>
+        <a
+          href={routes[lang].projects}
+          class={`${linkClass(routes[lang].projects)} menu-link`}
+          aria-current={ariaCurrent(routes[lang].projects)}
+        >
+          {t.nav.projects}
+        </a>
+        <a
+          href={routes[lang].blog}
+          class={`${linkClass(routes[lang].blog)} menu-link`}
+          aria-current={ariaCurrent(routes[lang].blog)}
+        >
+          {t.nav.blog}
+        </a>
+        <a
+          href={routes[lang].contact}
+          class={`${linkClass(routes[lang].contact)} menu-link`}
+          aria-current={ariaCurrent(routes[lang].contact)}
+        >
+          {t.nav.contact}
+        </a>
+      </nav>
+
+      <div class="flex flex-col gap-4">
+        <a
+          href={switchLang(Astro.url.pathname)}
+          aria-label={t.nav.aria.lang}
+          title={t.nav.aria.lang}
+        >
+          {lang === "es" ? "EN" : "ES"}
+        </a>
+
+        <button id="theme-toggle-mobile" aria-label={t.nav.aria.changeTheme}
+          >🌙</button
+        >
+
+        <a href={routes[lang].contact} class="btn btn-primary">
+          {t.cta.talk}
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<script define:vars={{
-  labelOpen: t.nav.mobileMenuOpen,
-  labelClose: t.nav.mobileMenuClose
-}}>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
+<script
+  define:vars={{
+    labelOpen: t.nav.mobileMenuOpen,
+    labelClose: t.nav.mobileMenuClose,
+  }}
+>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
 
   function openMenu() {
-    menu.classList.remove('scale-0');
-    menu.classList.add('scale-100');
-    toggle.classList.add('open');
+    menu.classList.remove("scale-0", "pointer-events-none");
+    menu.classList.add("scale-100", "pointer-events-auto");
+    toggle.classList.add("open");
 
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', labelClose);
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", labelClose);
 
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
+    menu.setAttribute("aria-hidden", "false");
   }
 
   function closeMenu() {
-    menu.classList.remove('scale-100');
-    menu.classList.add('scale-0');
-    toggle.classList.remove('open');
+    menu.classList.remove("scale-100", "pointer-events-auto");
+    menu.classList.add("scale-0", "pointer-events-none");
+    toggle.classList.remove("open");
 
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', labelOpen);
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", labelOpen);
 
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
+    menu.setAttribute("aria-hidden", "true");
   }
 
-  toggle?.addEventListener('click', () => {
-    if (menu.classList.contains('scale-0')) {
+  toggle?.addEventListener("click", () => {
+    if (menu.classList.contains("scale-0")) {
       openMenu();
     } else {
       closeMenu();
     }
   });
 
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>
