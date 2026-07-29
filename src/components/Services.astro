@@ -9,6 +9,17 @@ import ArrowIcon from "../components/icons/ArrowIcon.astro";
 <section class="py-24" id="servicios">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
+      <p class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#5A7283] mb-3">
+        Experiencia comprobada en entornos reales
+      </p>
+      <div class="mt-8 mb-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70 grayscale hover:grayscale-0 transition-all">
+  <!-- Inserta aquí los logos o nombres tipográficos de tus clientes (Abogados, Fundaciones, etc.) -->
+  <div class="flex items-center justify-center font-bold text-[#5A7283]">Logo Cliente 1</div>
+  <div class="flex items-center justify-center font-bold text-[#5A7283]">Logo Cliente 2</div>
+  <div class="flex items-center justify-center font-bold text-[#5A7283]">Logo Cliente 3</div>
+  <div class="flex items-center justify-center font-bold text-[#5A7283]">Logo Cliente 4</div>
+</div>
+
       <h2 class="text-3xl lg:text-4xl font-bold text-primary">
         {t.services.title}
       </h2>
@@ -19,20 +30,19 @@ import ArrowIcon from "../components/icons/ArrowIcon.astro";
 
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Card 1 -->
-      <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card1.label} aria-labelledby={t.services.aria.card1.labelledby}>
+      <a href="#" class="group card hover:border-text flex justify-between flex-col  focus-visible:ring" aria-label={t.services.aria.card1.label} aria-labelledby={t.services.aria.card1.labelledby}>
         <div
           class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
         >
           <PerformanceIcon class="w-8 h-8 text-blue-700" />
         </div>
-
         <h3 class="text-xl font-bold">{t.services.card1.title}</h3>
 
         <p class="mb-6">
           {t.services.card1.description}
         </p>
 
-        <p class="text-accent font-bold mb-8">
+        <p class="text-text font-bold mb-8">
           {t.services.card1.object}
         </p>
 
@@ -43,7 +53,7 @@ import ArrowIcon from "../components/icons/ArrowIcon.astro";
       </a>
 
       <!-- Card 2 -->
-       <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card2.label} aria-labelledby={t.services.aria.card2.labelledby}>
+       <a href="#" class="group card hover:border-text flex justify-between flex-col  focus-visible:ring" aria-label={t.services.aria.card2.label} aria-labelledby={t.services.aria.card2.labelledby}>
         <div
           class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
         >
@@ -70,7 +80,7 @@ import ArrowIcon from "../components/icons/ArrowIcon.astro";
 
       <!-- Card 3 -->
 
-      <a href="#" class="group card card-hover flex justify-between flex-col bg-white focus-visible:ring" aria-label={t.services.aria.card3.label} aria-labelledby={t.services.aria.card3.labelledby}>
+      <a href="#" class="group card hover:border-text flex justify-between flex-col  focus-visible:ring" aria-label={t.services.aria.card3.label} aria-labelledby={t.services.aria.card3.labelledby}>
         <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
           <WebsiteIcon class="w-8 h-8 text-indigo-700" />
         </div>

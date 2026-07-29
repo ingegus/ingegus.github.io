@@ -5,30 +5,36 @@
 @import "./components/nav.css";
 @import "./components/cards.css";
 
+
 /* Define variables de color para el tema */
 @theme {
-  --color-primary: #232946;
-  --color-primary-dark: #fff7f7;
-
-  --color-secondary: #5f6c7b;
-  --color-secondary-dark: #f4f4f5;
-
-  --color-accent: #0E3B43;
-  
-  --color-link: #1a5480;
-  --color-link-hover: #257DB3;
-
   --color-background: #fffffe;
+  --color-text: #0E3B43;
+
+  --color-primary: #232946;
+  --color-secondary: #3B5C7A;
+  
+  --color-border: #545966;
+
+  --color-link: #1a5480;
+  --color-link-hover:  #245F7B;
+  
   --color-button-bg: #007bff1a;
-
-  --color-surface: #ffffff;
-  --color-surface-dark: #1e293b;
-
-  --color-border: #e5e7eb;
-  --color-border-dark: #334155;
-
-  --radius-card: 1.5rem;
 }
+
+.dark {
+  --color-background: #0f172a;
+  --color-text: #f4f4f5;
+
+  --color-primary: #e4e4e7;
+  --color-secondary: #cbd5e1;
+
+  --color-border: #EBEBEB;
+
+  --color-link: #60a5fa;
+  --color-link-hover: #93c5fd;
+}
+
 
 /* Define fuentes del sitio */
 @font-face {
@@ -61,14 +67,9 @@
     font-family: 'Atkinson', system-ui, sans-serif;
     background-color: var(--color-background);
     min-height: 100vh;
-    color: var(--color-accent);
+    color: var(--color-text);
   }
-  /* Modo oscuro */
-  .dark body {
-    background-color: black;
-    color: var(--color-secondary-dark);
-  }
-
+ 
   /* enlaces */
   a {
     color: var(--color-link);
@@ -90,15 +91,12 @@
   h3,
   h4 {
     color: var(--color-primary);
-    @apply mb-4
+    margin-bottom: 1rem;
   }
 
   p {
     line-height: 1.6;
-    @apply text-secondary;
-  }
-
-  
+  }  
 }
 
 

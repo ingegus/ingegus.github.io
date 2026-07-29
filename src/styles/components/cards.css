@@ -8,9 +8,6 @@
   .dark .card {
     background-color: var(--color-surface-dark);
     border-color: var(--color-border-dark);
-  }
-
-  .card-hover {
-    @apply hover:border-accent;
+    color: var(--color-text);
   }
 }

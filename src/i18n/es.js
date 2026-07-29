@@ -35,21 +35,21 @@ export default {
   hero: {
     badge: "Especialista en Moodle y WordPress para e-learning",
     title: {
-      part1: "Soluciones de",
-      highlight: "e-learning",
-      part2: "con Moodle y WordPress"
+      part1: "Plataformas e-learning",
+      highlight: "rentables:",
+      part2: "sin caídas, sin lentitud y listas para vender"
     },
-    subtitle: "Diseño e implemento plataformas e-learning seguras, escalables y enfocadas en resultados para empresas e instituciones.",
-    ctaPrimary: "Ver proyectos",
-    ctaSecondary: "Ver servicios",
+    subtitle: "Diseño plataformas e-learning y sitios web corporativos de alto rendimiento, seguros, escalables y enfocados en resultados.",
+    ctaPrimary: "Hablemos de tu proyecto",
+    ctaSecondary: "Ver casos de éxito",
     trust: "Experiencia implementando plataformas educativas en entornos reales",
     metric: {
       value: "+10 años ",
       label: "de experiencia en e-learning"
     },
     aria: {
-      projects: "Ver proyectos",
-      services: "Ver servicios"
+      projects: "Hablemos de tu proyecto",
+      services: "Ver casos de éxito"
     },
 
     imageAlt: " Imagen de ejemplo de una plataforma e-learning personalizada diseñada por Inge Gus, mostrando un diseño moderno y funcional que destaca la experiencia en Moodle y WordPress."

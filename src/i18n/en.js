@@ -18,7 +18,7 @@ export default {
       mainNavegation: "Main navigation",
       mobileNavegation: "Mobile navigation",
       changeTheme: "Change theme",
-      lang: "Change language to English"
+      lang: "Change language to Spanish"
     },
     alt: {
       logo: "Inge Gus logo, the letter G with a spider in the center, representing creativity and connection in web design and eLearning development"
@@ -39,17 +39,17 @@ export default {
       highlight: "solutions",
       part2: "with Moodle and WordPress"
     },
-    subtitle: "I design and implement secure, scalable, results-focused e-learning platforms for businesses and institutions.",
-    ctaPrimary: "View projects",
-    ctaSecondary: "View services",
+    subtitle: "Design of high-performance, secure, scalable, and results-oriented e-learning platforms and corporate websites",
+    ctaPrimary: "Let's talk about your project",
+    ctaSecondary: "View success stories",
     trust: "Experience implementing educational platforms in real-world settings",
     metric: {
       value: "+10",
       label: "years of e-learning experience"
     },
       aria: {
-      projects: "View projects",
-      services: "View services"
+      projects: "Let's talk about your project",
+      services: "View success stories"
     },
     imageAlt: "Example image of a custom e-learning platform designed by Inge Gus, showcasing a modern and functional design that highlights expertise in Moodle and WordPress."
   },
