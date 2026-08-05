@@ -1,0 +1,54 @@
+---
+const {
+    icon: IconComponent,
+    iconBgColor,
+    iconColor,
+    title,
+    description,
+    objectText,
+    actionText,
+    ariaLabel,
+    ariaLabelledby,
+} = Astro.props as {
+    icon: any;
+    iconBgColor: string;
+    iconColor: string;
+    title: string;
+    description: string;
+    objectText: string;
+    actionText: string;
+    ariaLabel: string;
+    ariaLabelledby: string;
+};
+import ArrowIcon from "./icons/ArrowIcon.astro";
+---
+
+<a
+    href="#"
+    class="group card hover:border-text flex justify-between flex-col focus-visible:ring"
+    aria-label={ariaLabel}
+    aria-labelledby={ariaLabelledby}
+>
+    <div>
+        <div
+            class={`w-14 h-14 ${iconBgColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+        >
+            <IconComponent class={`w-8 h-8 ${iconColor}`} />
+        </div>
+        <h3 class="text-xl font-bold mb-3">{title}</h3>
+        <p class="mb-6 text-sm">
+            {description}
+        </p>
+    </div>
+    <div>
+        <p class="text-accent font-bold mb-8 text-sm">
+            {objectText}
+        </p>
+        <span
+            class="inline-flex items-center text-link group-hover:text-link-hover transition-colors"
+        >
+            {actionText}
+            <ArrowIcon class="w-4 h-4 ml-1" />
+        </span>
+    </div>
+</a>

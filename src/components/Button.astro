@@ -1,0 +1,22 @@
+---
+// components/Button.astro
+const { href, variant = "primary", ariaLabel, text } = Astro.props as {
+    href: string;
+    variant?: "primary" | "secondary";
+    ariaLabel?: string;
+    text: string;
+};
+
+const baseClasses = "btn btn-lg inline-flex items-center justify-center font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+
+const variants = {
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+};
+
+const variantClasses = variants[variant] || variants.primary;
+---
+
+<a href={href} class={`${baseClasses} ${variantClasses}`} aria-label={ariaLabel}>
+  {text}
+</a>
